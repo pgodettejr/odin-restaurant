@@ -1,0 +1,18 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html { color-scheme: dark }
+
+body {
+  --scrollbar-width: 0px;
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  /* font-size: 10px; */
+}
+
+.home-button {
+  color: orange;
+}
