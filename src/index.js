@@ -1,3 +1,5 @@
+// Currently, Webpack is seeing the images as dependencies, but not processing them via a url or image loader? (why images are showing up broken on the HTML)
+
 import './styles.css';
 import Wreath from './img/wreath-6524584_640.png';
 
