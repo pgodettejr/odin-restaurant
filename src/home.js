@@ -64,8 +64,39 @@ export function homepage() {
   galleryHeaderText.textContent = 'Gallery';
   galleryHeader.appendChild(galleryHeaderText);
 
-  // Images for the 'Gallery' section
-  
+  // Images for the 'Gallery' section. Possibly change this section to a forEach method for the gallery divs (add a class to each one and/or add unique images to each)?
+  let gallery1 = document.createElement('div');
+  let gallery2 = document.createElement('div');
+  let gallery3 = document.createElement('div');
+  let gallery4 = document.createElement('div');
 
+  gallery1.classList.add('gallery-1');
+  gallery2.classList.add('gallery-2');
+  gallery3.classList.add('gallery-3');
+  gallery4.classList.add('gallery-4');
 
+  let galleryPic1 = document.createElement('img');
+  galleryPic1.src = '.img/meat-6507228_640.jpg';
+  galleryPic1.classList.add('meat-plate');
+  gallery1.appendChild(galleryPic1);
+
+  let galleryPic2 = document.createElement('img');
+  galleryPic2.src = '.img/gyros-674425_640.jpg';
+  galleryPic2.classList.add('gyro');
+  gallery2.appendChild(galleryPic2);
+
+  let galleryPic3 = document.createElement('img');
+  galleryPic3.src = '.img/food-3337621_640.jpg';
+  galleryPic3.classList.add('salad');
+  gallery3.appendChild(galleryPic3);
+
+  let galleryPic4 = document.createElement('img');
+  galleryPic4.src = '.img/table-2931360_1920.jpg';
+  galleryPic4.classList.add('table');
+  gallery4.appendChild(galleryPic4);
+
+  // Subtext divs for the 'Gallery' section. Trying to implement a forEach method for these as they will be empty divs with a class of 'subtext'
+  // document.querySelectorAll('div[class^="gallery-"]').forEach((element) => {
+  //   element.classList.add('subtext');
+  // })
 }
