@@ -21,7 +21,7 @@ export function homepage() {
   mediaImage.setAttribute = ('alt', 'restaurant-pic-1');
   media.appendChild(mediaImage);
 
-  // Background image, header and text for the 'Our Philosophy' section of the homepage
+  // Background image, header, text and Menu section button for the 'Our Philosophy' section of the homepage
   let foodImage = document.createElement('img');
   foodImage.src = '.img/table-2931360_1920.jpg';
   foodImage.setAttribute('alt', 'restaurant-pic-2');
@@ -34,6 +34,12 @@ export function homepage() {
   const foodText = document.createElement('p');
   foodText.textContent = "Here at Aegean Grille, experience the vibrant flavors of Greece with our health-conscious, nutritious fare! From fresh salads to succulent grilled meats, each dish is crafted to delight your taste buds and nourish your body. Join us for a delicious journey inspired by the Mediterranean lifestyle!";
   food.appendChild(foodText);
+
+  const bigMenuBtn = document.createElement('button');
+  const bigBtnText = document.createTextNode("View Our Menu");
+  bigMenuBtn.classList.add('big-menu-button');
+  bigMenuBtn.appendChild(bigBtnText);
+  food.appendChild(bigMenuBtn);
 
   // Header and text for the 'About Us' section of the homepage
   const aboutHeader = document.createElement('h2');
