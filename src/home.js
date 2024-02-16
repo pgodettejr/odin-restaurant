@@ -1,5 +1,3 @@
-export const content = document.getElementById('content');
-
 export function homepage() {
   // Generates different sections of the home page under 'content' div
   const media = document.createElement('div');
@@ -110,6 +108,8 @@ export function homepage() {
   galleryInfo.appendChild(gallery4);
 
   // Attaching all main sections (Media, Our Philosophy, About Us, Testimonial, Gallery) to the existing content div
+  // TODO: Not sure if these will work as index.js is appending the entire function as a child to the content div already. 
+  // OPTION: Could not keep content as separate DOM in this file unless we figure out how to call this JS file correctly in index.js
   content.appendChild(media);
   content.appendChild(food);
   content.appendChild(about);
