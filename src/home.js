@@ -44,4 +44,28 @@ export function homepage() {
   const aboutText = document.createElement('p');
   aboutText.textContent = "Nestled by the azure shores of the Aegean Sea, our restaurant is a culinary haven steeped in rich history and seaside charm. Born from a deep-rooted love for the Aegean flavors, our journey began generations ago, where time-honored recipes were passed down with care. Inspired by the sun-kissed landscapes and bountiful waters of our homeland, we embarked on a mission to bring the essence of the Aegean to your plate.";
 
+  // Text elements for the 'Testimonial' section
+  const quote = document.createElement('div');
+  const boldQuote = document.createElement('em');
+  const author = document.createElement('div');
+
+  quote.classList.add('quote');
+  author.classList.add('author');
+
+  boldQuote.textContent = " 'Indulging in the culinary delights at this Aegean gem is an experience like no other. Each dish is a masterpiece, crafted with love and precision, transporting you to the sun-drenched shores of the Aegean Sea with every bite. This restaurant is a must-visit destination for anyone craving a taste of Greece's vibrant flavors and timeless traditions.' ";
+  author.textContent = "- Maria K., Satisfied Customer"
+
+  quote.appendChild(boldQuote); // May NOT need to be appended to quote div (might need to find a different way of showing bold text through JS)
+  quote.appendChild(author); // May need to be appended to testimonial div instead depending on how this text is positioned against the quote on the homepage
+  testimonial.appendChild(quote);
+
+  // Header element for 'Gallery' section
+  const galleryHeaderText = document.createElement('h2');
+  galleryHeaderText.textContent = 'Gallery';
+  galleryHeader.appendChild(galleryHeaderText);
+
+  // Images for the 'Gallery' section
+  
+
+
 }
