@@ -1,6 +1,3 @@
-// Currently, Webpack is seeing the images as dependencies, but not processing them via a url or image loader? (why images are showing up broken on the HTML)
-// TODO: find out why home.js isn't being recognized by Webpack at all (none of the elements from home.js generate on the website currently)
-
 import './styles.css';
 import Wreath from './img/wreath-6524584_640.png';
 import { homepage } from './home.js';
