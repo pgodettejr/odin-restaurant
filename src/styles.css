@@ -15,7 +15,7 @@ body {
 
 /* Test this out and see if the image shows up */
 .logo {
-  background-image: url('.src/img/wreath-6524584_640.png');
+  background-image: url('./img/wreath-6524584_640.png');
 }
 
 .home-button {

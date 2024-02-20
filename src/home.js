@@ -17,13 +17,13 @@ export function homepage() {
 
   // Image for the 'media' section of the homepage
   let mediaImage = document.createElement('img');
-  mediaImage.src = '.img/greek-523731_1920.jpg';
+  mediaImage.src = './img/greek-523731_1920.jpg';
   mediaImage.setAttribute = ('alt', 'restaurant-pic-1');
   media.appendChild(mediaImage);
 
   // Background image, header, text and Menu section button for the 'Our Philosophy' section of the homepage
   let foodImage = document.createElement('img');
-  foodImage.src = '.img/table-2931360_1920.jpg';
+  foodImage.src = './img/table-2931360_1920.jpg';
   foodImage.setAttribute('alt', 'restaurant-pic-2');
   food.appendChild(foodImage);
 
@@ -81,22 +81,22 @@ export function homepage() {
   gallery4.classList.add('gallery-4');
 
   let galleryPic1 = document.createElement('img');
-  galleryPic1.src = '.img/meat-6507228_640.jpg';
+  galleryPic1.src = './img/meat-6507228_640.jpg';
   galleryPic1.setAttribute('alt', 'meat-plate');
   gallery1.appendChild(galleryPic1);
 
   let galleryPic2 = document.createElement('img');
-  galleryPic2.src = '.img/gyros-674425_640.jpg';
+  galleryPic2.src = './img/gyros-674425_640.jpg';
   galleryPic2.setAttribute('alt', 'gyro');
   gallery2.appendChild(galleryPic2);
 
   let galleryPic3 = document.createElement('img');
-  galleryPic3.src = '.img/food-3337621_640.jpg';
+  galleryPic3.src = './img/food-3337621_640.jpg';
   galleryPic3.setAttribute('alt', 'salad');
   gallery3.appendChild(galleryPic3);
 
   let galleryPic4 = document.createElement('img');
-  galleryPic4.src = '.img/table-2931360_1920.jpg';
+  galleryPic4.src = './img/table-2931360_1920.jpg';
   galleryPic4.setAttribute('alt', 'table');
   gallery4.appendChild(galleryPic4);
 
