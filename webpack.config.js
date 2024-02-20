@@ -1,4 +1,7 @@
+// TODO: try to enable webpack as a variable along with watchFiles below as a solution to src not being recognized
+
 const path = require('path');
+// const webpack = require('webpack');
 
 module.exports = {
   mode: 'development',
@@ -6,6 +9,7 @@ module.exports = {
   // devtool: 'eval',
   devServer: { // Delete this if we try the peterxjang method for webpack-dev-server (also delete "start" line in package.json file)
     static: './dist',
+    // watchFiles: [path.resolve(__dirname, 'src')],
   },
   output: {
     filename: 'main.js',
