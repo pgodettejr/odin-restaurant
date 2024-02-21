@@ -15,6 +15,12 @@ body {
 
 .logo {
   background-image: url('./img/wreath-6524584_640.png');
+  background-repeat: no-repeat;
+  /* background-size: 10rem; */
+}
+
+.food > img {
+  background-image: url('./img/table-2931360_1920.jpg');
 }
 
 .home-button {

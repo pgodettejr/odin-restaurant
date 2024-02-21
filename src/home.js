@@ -48,6 +48,7 @@ export function homepage() {
 
   const aboutText = document.createElement('p');
   aboutText.textContent = "Nestled by the azure shores of the Aegean Sea, our restaurant is a culinary haven steeped in rich history and seaside charm. Born from a deep-rooted love for the Aegean flavors, our journey began generations ago, where time-honored recipes were passed down with care. Inspired by the sun-kissed landscapes and bountiful waters of our homeland, we embarked on a mission to bring the essence of the Aegean to your plate.";
+  about.appendChild(aboutText);
 
   // Text elements for the 'Testimonial' section
   const quote = document.createElement('div');
@@ -69,12 +70,13 @@ export function homepage() {
   galleryHeaderText.textContent = 'Gallery';
   galleryHeader.appendChild(galleryHeaderText);
 
-  // Images for the 'Gallery' section. Possibly change this section to a forEach method for the gallery divs (add a class to each one and/or add unique images to each)?
+  // Images for the 'Gallery' section
   let gallery1 = document.createElement('div');
   let gallery2 = document.createElement('div');
   let gallery3 = document.createElement('div');
   let gallery4 = document.createElement('div');
 
+  // OPTION: Possibly change this section to a forEach method for the gallery divs (add a class to each one and/or add unique images to each)?
   gallery1.classList.add('gallery-1');
   gallery2.classList.add('gallery-2');
   gallery3.classList.add('gallery-3');
