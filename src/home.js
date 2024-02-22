@@ -17,13 +17,13 @@ export function homepage() {
 
   // Image for the 'media' section of the homepage
   let mediaImage = document.createElement('img');
-  mediaImage.src = './img/greek-523731_1920.jpg';
+  mediaImage.src = 'https://cdn.pixabay.com/photo/2014/11/09/14/42/greek-523731_1280.jpg';
   mediaImage.setAttribute = ('alt', 'restaurant-pic-1');
   media.appendChild(mediaImage);
 
   // Background image, header, text and Menu section button for the 'Our Philosophy' section of the homepage
   let foodImage = document.createElement('img');
-  foodImage.src = './img/table-2931360_1920.jpg';
+  foodImage.src = 'https://cdn.pixabay.com/photo/2017/11/08/19/01/table-2931360_1280.jpg';
   foodImage.setAttribute('alt', 'restaurant-pic-2');
   food.appendChild(foodImage);
 
@@ -98,7 +98,7 @@ export function homepage() {
   gallery3.appendChild(galleryPic3);
 
   let galleryPic4 = document.createElement('img');
-  galleryPic4.src = './img/table-2931360_1920.jpg';
+  galleryPic4.src = 'https://cdn.pixabay.com/photo/2017/11/08/19/01/table-2931360_1280.jpg';
   galleryPic4.setAttribute('alt', 'table');
   gallery4.appendChild(galleryPic4);
 
