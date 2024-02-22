@@ -1,3 +1,5 @@
+// TODO: Experiment with importing the entire img folder to this file
+
 import './styles.css';
 import Wreath from './img/wreath-6524584_640.png';
 import { homepage } from './home.js';
