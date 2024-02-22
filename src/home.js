@@ -1,3 +1,6 @@
+// TODO: Continue changing all relative paths on images to absolute paths (aka literally find the web address of the image and replace the file path) EXCEPT FOR ONE
+// On the unchanged one, use ChatGPT answer of Inspecting Network Request (404 error in DevTools) and research checking for CORS (MDN docs?)
+
 export function homepage() {
   // Generates different sections of the home page under 'content' div
   const media = document.createElement('div');
