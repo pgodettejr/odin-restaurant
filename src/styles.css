@@ -13,14 +13,14 @@ body {
   /* font-size: 10px; */
 }
 
-.logo {
-  background-image: url('./img/wreath-6524584_640.png');
+/* .logo {
+  background-image: url('https://cdn.pixabay.com/photo/2021/08/05/18/18/wreath-6524584_1280.png');
   background-repeat: no-repeat;
-  /* background-size: 10rem; */
-}
+  background-size: 10rem;
+} */
 
 .food > img {
-  background-image: url('./img/table-2931360_1920.jpg');
+  background-image: url('https://cdn.pixabay.com/photo/2017/11/08/19/01/table-2931360_1280.jpg');
 }
 
 .home-button {

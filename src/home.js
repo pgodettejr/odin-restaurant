@@ -1,5 +1,4 @@
-// TODO: Continue changing all relative paths on images to absolute paths (aka literally find the web address of the image and replace the file path) EXCEPT FOR ONE
-// On the unchanged one, use ChatGPT answer of Inspecting Network Request (404 error in DevTools) and research checking for CORS (MDN docs?)
+// TODO: On the unchanged relative path, use ChatGPT answer of Inspecting Network Request (404 error in DevTools) and research checking for CORS (MDN docs?)
 
 export function homepage() {
   // Generates different sections of the home page under 'content' div
@@ -91,12 +90,12 @@ export function homepage() {
   gallery1.appendChild(galleryPic1);
 
   let galleryPic2 = document.createElement('img');
-  galleryPic2.src = './img/gyros-674425_640.jpg';
+  galleryPic2.src = 'https://cdn.pixabay.com/photo/2015/03/15/13/40/gyros-674425_1280.jpg';
   galleryPic2.setAttribute('alt', 'gyro');
   gallery2.appendChild(galleryPic2);
 
   let galleryPic3 = document.createElement('img');
-  galleryPic3.src = './img/food-3337621_640.jpg';
+  galleryPic3.src = 'https://cdn.pixabay.com/photo/2018/04/21/03/47/food-3337621_1280.jpg';
   galleryPic3.setAttribute('alt', 'salad');
   gallery3.appendChild(galleryPic3);
 
@@ -106,6 +105,7 @@ export function homepage() {
   gallery4.appendChild(galleryPic4);
 
   // Subtext divs for the 'Gallery' section. Trying to implement a forEach method for these as they will be empty divs with a class of 'subtext'
+  // TODO: Inspect DevTools and make sure this current loop is set up correctly in the HTML/DOM
   document.querySelectorAll('div[class^="gallery-"]').forEach((element) => {
     let subtext = document.createElement('div');
     subtext.classList.add('subtext');
