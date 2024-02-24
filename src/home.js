@@ -1,5 +1,3 @@
-// TODO: On the unchanged relative path, use ChatGPT answer of Inspecting Network Request (404 error in DevTools) and research checking for CORS (MDN docs?)
-
 export function homepage() {
   // Generates different sections of the home page under 'content' div
   const media = document.createElement('div');
@@ -63,8 +61,9 @@ export function homepage() {
   boldQuote.textContent = " 'Indulging in the culinary delights at this Aegean gem is an experience like no other. Each dish is a masterpiece, crafted with love and precision, transporting you to the sun-drenched shores of the Aegean Sea with every bite. This restaurant is a must-visit destination for anyone craving a taste of Greece's vibrant flavors and timeless traditions.' ";
   author.textContent = "- Maria K., Satisfied Customer"
 
-  quote.appendChild(boldQuote); // May NOT need to be appended to quote div (might need to find a different way of showing bold text through JS)
-  quote.appendChild(author); // May need to be appended to testimonial div instead depending on how this text is positioned against the quote on the homepage
+  // Check both TODOs here only AFTER styling the CSS
+  quote.appendChild(boldQuote); // TODO: May NOT need to be appended to quote div (might need to find a different way of showing bold text through JS)
+  quote.appendChild(author); // TODO: May need to be appended to testimonial div instead depending on how this text is positioned against the quote on the homepage
   testimonial.appendChild(quote);
 
   // Header element for 'Gallery' section
@@ -85,7 +84,7 @@ export function homepage() {
   gallery4.classList.add('gallery-4');
 
   let galleryPic1 = document.createElement('img');
-  galleryPic1.src = './img/meat-6507228_640.jpg';
+  galleryPic1.src = 'https://cdn.pixabay.com/photo/2021/07/29/13/28/meat-6507228_1280.jpg';
   galleryPic1.setAttribute('alt', 'meat-plate');
   gallery1.appendChild(galleryPic1);
 
@@ -119,8 +118,6 @@ export function homepage() {
   galleryInfo.appendChild(gallery4);
 
   // Attaching all main sections (Media, Our Philosophy, About Us, Testimonial, Gallery) to the existing content div
-  // TODO: Not sure if these will work as index.js is appending the entire function as a child to the content div already. 
-  // OPTION: Could not keep content as separate DOM in this file unless we figure out how to call this JS file correctly in index.js
   content.appendChild(media);
   content.appendChild(food);
   content.appendChild(about);

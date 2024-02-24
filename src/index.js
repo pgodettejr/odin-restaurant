@@ -1,3 +1,5 @@
+// Uncaught TypeError: Failed to execute 'appendChild' on 'Node': parameter 1 is not of type 'Node' <-- does this have to do with line 19 or not having "webpack require" config?
+
 import './styles.css';
 // import Wreath from './img/wreath-6524584_640.png';
 import { homepage } from './home.js';

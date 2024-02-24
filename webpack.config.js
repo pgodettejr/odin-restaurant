@@ -1,4 +1,5 @@
 // TODO: try to enable webpack as a variable along with watchFiles below as a solution to src not being recognized
+// Uncaught TypeError: Failed to execute 'appendChild' on 'Node': parameter 1 is not of type 'Node' <-- Does this have to do with not enabling line 5 below? (webpack require)
 
 const path = require('path');
 // const webpack = require('webpack');
