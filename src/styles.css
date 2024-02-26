@@ -26,3 +26,22 @@ body {
 nav > button {
   color: orange;
 }
+
+.gallery-header {
+  text-align: center;
+}
+
+.gallery-info {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top: 32px;
+  margin-bottom: 120px;
+  gap: 64px;
+}
+
+.gallery-info > div[class^="gallery-"] > img {
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+}
