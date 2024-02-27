@@ -84,7 +84,10 @@ nav > button {
   background: #3882F6;
   border: 1px solid #3882F6;
   border-radius: 8px;
+  font-size: 32px;
   font-weight: 800;
+  margin-top: -1em;
+  padding: 32px;
 }
 
 .about {
