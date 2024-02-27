@@ -61,9 +61,8 @@ export function homepage() {
   boldQuote.textContent = " 'Indulging in the culinary delights at this Aegean gem is an experience like no other. Each dish is a masterpiece, crafted with love and precision, transporting you to the sun-drenched shores of the Aegean Sea with every bite. This restaurant is a must-visit destination for anyone craving a taste of Greece's vibrant flavors and timeless traditions.' ";
   author.textContent = "- Maria K., Satisfied Customer"
 
-  // Check both TODOs here only AFTER styling the CSS
-  quote.appendChild(boldQuote); // TODO: May NOT need to be appended to quote div (might need to find a different way of showing bold text through JS)
-  quote.appendChild(author); // TODO: May need to be appended to testimonial div instead depending on how this text is positioned against the quote on the homepage
+  quote.appendChild(boldQuote);
+  quote.appendChild(author);
   testimonial.appendChild(quote);
 
   // Header element for 'Gallery' section
