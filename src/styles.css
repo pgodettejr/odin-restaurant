@@ -4,6 +4,7 @@
   box-sizing: border-box;
 }
 
+/* White and some kind of light blue or teal for the colorway/"branding" */
 html { color-scheme: dark }
 
 body {
@@ -13,11 +14,32 @@ body {
   /* font-size: 10px; */
 }
 
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 /* .logo {
   background-image: url('https://cdn.pixabay.com/photo/2021/08/05/18/18/wreath-6524584_1280.png');
   background-repeat: no-repeat;
   background-size: 10rem;
 } */
+
+.logo > img {
+  width: 300px;
+  height: 300px;
+  margin: 32px;
+  padding: 4px;
+}
+
+/* This section will need more styling. Goal: make it look like a cross between YouTube channel nav bar and Ilios Restaurant nav bar */
+/* See KP's video on "Create a clean, modern navigation with HTML & CSS" or Geekboots' similar custom navbar video, both in "Web Dev Tricks" playlist */
+nav {
+  margin: 64px;
+  padding: 64px;
+}
 
 .food > img {
   background-image: url('https://cdn.pixabay.com/photo/2017/11/08/19/01/table-2931360_1280.jpg');
