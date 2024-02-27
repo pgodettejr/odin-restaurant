@@ -41,12 +41,16 @@ nav {
   padding: 64px;
 }
 
-.food > img {
-  background-image: url('https://cdn.pixabay.com/photo/2017/11/08/19/01/table-2931360_1280.jpg');
-}
-
 nav > button {
   color: orange;
+}
+
+.media > img {
+  min-width: 100vw;
+}
+
+.food > img {
+  /* background-image: url('https://cdn.pixabay.com/photo/2017/11/08/19/01/table-2931360_1280.jpg'); */
 }
 
 .about {
