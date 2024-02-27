@@ -22,10 +22,10 @@ export function homepage() {
   media.appendChild(mediaImage);
 
   // Background image, header, text and Menu section button for the 'Our Philosophy' section of the homepage
-  let foodImage = document.createElement('img');
-  foodImage.src = 'https://cdn.pixabay.com/photo/2017/11/08/19/01/table-2931360_1280.jpg';
-  foodImage.setAttribute('alt', 'restaurant-pic-2');
-  food.appendChild(foodImage);
+  // let foodImage = document.createElement('img');
+  // foodImage.src = 'https://cdn.pixabay.com/photo/2017/11/08/19/01/table-2931360_1280.jpg';
+  // foodImage.setAttribute('alt', 'restaurant-pic-2');
+  // food.appendChild(foodImage);
 
   const foodHeader = document.createElement('h2');
   foodHeader.textContent = 'Our Philosophy';

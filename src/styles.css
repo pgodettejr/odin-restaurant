@@ -5,7 +5,7 @@
 }
 
 /* White and some kind of light blue or teal for the colorway/"branding" */
-html { color-scheme: dark }
+/* html { color-scheme: dark } */
 
 body {
   --scrollbar-width: 0px;
@@ -19,6 +19,7 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background: #e5e7eb;
 }
 
 /* .logo {
@@ -42,15 +43,48 @@ nav {
 }
 
 nav > button {
-  color: orange;
+  background: #3882F6;
+  border: 1px solid #3882F6;
+  border-radius: 8px;
 }
 
 .media > img {
   min-width: 100vw;
 }
 
-.food > img {
-  /* background-image: url('https://cdn.pixabay.com/photo/2017/11/08/19/01/table-2931360_1280.jpg'); */
+.food {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  background-color: lightgray;
+  background-image: url('https://cdn.pixabay.com/photo/2017/11/08/19/01/table-2931360_1280.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: multiply;
+}
+
+.food > * {
+  font-size: 36px;
+  font-weight: 100;
+  color: #1F2937;
+  margin: 64px;
+  padding: 64px;
+  max-width: 900px;
+}
+
+.food > h2 {
+  font-weight: 800;
+  margin-bottom: -3em;
+}
+
+.big-menu-button {
+  background: #3882F6;
+  border: 1px solid #3882F6;
+  border-radius: 8px;
+  font-weight: 800;
 }
 
 .about {
@@ -59,12 +93,13 @@ nav > button {
   justify-content: center;
   align-items: center;
   text-align: center;
+  background: #e5e7eb;
 }
 
 .about > * {
   font-size: 36px;
   font-weight: 100;
-  color: #1F2937;
+  color: #3882F6;
   margin: 64px;
   padding: 64px;
   max-width: 900px;
@@ -79,7 +114,7 @@ nav > button {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #e5e7eb;
+  background: #3882F6;
   text-align: center;
 }
 
@@ -108,6 +143,7 @@ nav > button {
   margin: 64px;
   padding: 64px;
   text-align: center;
+  /* background: #e5e7eb; */
 }
 
 .gallery-info {
@@ -117,12 +153,17 @@ nav > button {
   margin-top: 32px;
   margin-bottom: 120px;
   gap: 64px;
+  /* background: #e5e7eb; */
 }
 
 .gallery-info > div[class^="gallery-"] > img {
   width: 200px;
   height: 200px;
   border-radius: 10px;
+}
+
+footer {
+  background: #3882F6;
 }
 
 footer > img {
