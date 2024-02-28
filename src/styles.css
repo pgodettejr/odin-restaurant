@@ -34,9 +34,12 @@ header {
 
 /* This section will need more styling. Goal: make it look like a cross between YouTube channel nav bar and Ilios Restaurant nav bar. Make the header section sticky */
 /* See KP's video on "Create a clean, modern navigation with HTML & CSS" or Geekboots' similar custom navbar video, both in "Web Dev Tricks" playlist */
+/* May need to put the nav section in it's own separate div to get it to stick to the top of the page by itself (without the rest of the header) while scrolling */
 nav {
   margin: 16px;
   padding: 16px;
+  /* min-width: 100vw; */
+  /* position: fixed; */
 }
 
 nav > button {
