@@ -20,17 +20,14 @@ header {
   justify-content: center;
   align-items: center;
   background: #e5e7eb;
+  min-width: 100vw;
+  position: fixed;
 }
 
-/* .logo {
-  background-image: url('https://cdn.pixabay.com/photo/2021/08/05/18/18/wreath-6524584_1280.png');
-  background-repeat: no-repeat;
-  background-size: 10rem;
-} */
-
+/* Logo color changes to a light green if it's smaller than 180 x 180 px */
 .logo > img {
-  width: 300px;
-  height: 300px;
+  width: 180px;
+  height: 180px;
   margin: 32px;
   padding: 4px;
 }
@@ -38,8 +35,8 @@ header {
 /* This section will need more styling. Goal: make it look like a cross between YouTube channel nav bar and Ilios Restaurant nav bar. Make the header section sticky */
 /* See KP's video on "Create a clean, modern navigation with HTML & CSS" or Geekboots' similar custom navbar video, both in "Web Dev Tricks" playlist */
 nav {
-  margin: 64px;
-  padding: 64px;
+  margin: 16px;
+  padding: 16px;
 }
 
 nav > button {
@@ -78,7 +75,7 @@ nav > button {
 
 .food > h2 {
   font-weight: 800;
-  margin-bottom: -3em;
+  margin-bottom: -3em; /* Not exactly best practice for spacing between elements but it "works"? */
 }
 
 .big-menu-button {
