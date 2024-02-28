@@ -35,7 +35,7 @@ header {
   padding: 4px;
 }
 
-/* This section will need more styling. Goal: make it look like a cross between YouTube channel nav bar and Ilios Restaurant nav bar */
+/* This section will need more styling. Goal: make it look like a cross between YouTube channel nav bar and Ilios Restaurant nav bar. Make the header section sticky */
 /* See KP's video on "Create a clean, modern navigation with HTML & CSS" or Geekboots' similar custom navbar video, both in "Web Dev Tricks" playlist */
 nav {
   margin: 64px;
@@ -63,6 +63,7 @@ nav > button {
   background-image: url('https://cdn.pixabay.com/photo/2017/11/08/19/01/table-2931360_1280.jpg');
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   background-blend-mode: multiply;
 }
 
@@ -87,7 +88,7 @@ nav > button {
   font-size: 32px;
   font-weight: 800;
   margin-top: -1em;
-  padding: 32px;
+  padding: 1rem 3rem;
 }
 
 .about {
