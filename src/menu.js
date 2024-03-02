@@ -48,6 +48,7 @@ function menupage () {
   price1.textContent = '$18.00';
   menuContent1.appendChild(price1);
 
+  // TODO: Change this to a forEach method that will add this button to all menu items
   const orderBtn = document.createElement('button');
   const orderText = document.createTextNode('Add to Order');
   orderBtn.classList.add('order-btn');
