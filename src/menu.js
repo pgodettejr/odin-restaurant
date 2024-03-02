@@ -1,4 +1,5 @@
 // TODO: Don't forget to add 'export' at the beginning of this function when this is all done, THEN import it into index.js
+// OPTION: Is there a way to refactor this code to have elements dynamically created with more loops (e.g: forEach), reducing the amount of code?
 
 function menupage () {
   // Elements for the container of the entire menu page
@@ -48,7 +49,7 @@ function menupage () {
   price1.textContent = '$18.00';
   menuContent1.appendChild(price1);
 
-  // TODO: Change this to a forEach method that will add this button to all menu items
+  // TODO: Change this to a forEach method that will add this button to all menu items. Comment this out, DON'T delete (in case the method doesn't work)
   const orderBtn = document.createElement('button');
   const orderText = document.createTextNode('Add to Order');
   orderBtn.classList.add('order-btn');
