@@ -89,11 +89,11 @@ function menupage () {
   price2.textContent = '$11.00';
   menuContent2.appendChild(price2);
 
-  const orderBtn = document.createElement('button');
-  const orderText = document.createTextNode('Add to Order');
-  orderBtn.classList.add('order-btn');
-  orderBtn.appendChild(orderText);
-  menuContent2.appendChild(orderBtn);
+  // const orderBtn = document.createElement('button');
+  // const orderText = document.createTextNode('Add to Order');
+  // orderBtn.classList.add('order-btn');
+  // orderBtn.appendChild(orderText);
+  // menuContent2.appendChild(orderBtn);
 
   // Section that includes the image, pricing, dish description and Order button for the third menu item
   const menuItem3 = document.createElement('div');
@@ -130,9 +130,9 @@ function menupage () {
   price3.textContent = '$10.00';
   menuContent3.appendChild(price3);
 
-  const orderBtn = document.createElement('button');
-  const orderText = document.createTextNode('Add to Order');
-  orderBtn.classList.add('order-btn');
-  orderBtn.appendChild(orderText);
-  menuContent2.appendChild(orderBtn);
+  // const orderBtn = document.createElement('button');
+  // const orderText = document.createTextNode('Add to Order');
+  // orderBtn.classList.add('order-btn');
+  // orderBtn.appendChild(orderText);
+  // menuContent2.appendChild(orderBtn);
 }
