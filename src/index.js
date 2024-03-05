@@ -9,16 +9,40 @@ import { menupage } from './menu.js';
 const content = document.getElementById('content');
 const navBar = document.querySelector('nav');
 
-// TODO: Add 'else if' statement for the 'Contact' page section
-// OPTION: turn if-else into a switch statement (see: odin-library Gameboard function as an example)
+// Navigation bar button functionality to switch pages via tabbed browsing
 navBar.forEach(button => {
   button.addEventListener('click', (e) => {
-    if (button === 'Menu') {
-      content.replaceChildren();
-      content.appendChild(menupage());
-    } else if (button === 'Home') {
-      content.replaceChildren();
-      content.appendChild(homepage());
+    let currentButton = document.querySelector('button[aria-current]');
+
+    // if (button === 'Menu') {
+    //   currentButton.removeAttribute('aria-current');
+    //   button.setAttribute('aria-current', 'page');
+    //   content.replaceChildren();
+    //   content.appendChild(menupage());
+    // } else if (button === 'Home') {
+    //   currentButton.removeAttribute('aria-current');
+    //   button.setAttribute('aria-current', 'page');
+    //   content.replaceChildren();
+    //   content.appendChild(homepage());
+    //   // TODO: Add 'else if' statement for the 'Contact' page section 
+    // }
+
+    switch (true) {
+      case (button === 'Menu'):
+        currentButton.removeAttribute('aria-current');
+        button.setAttribute('aria-current', 'page');
+        content.replaceChildren();
+        content.appendChild(menupage());
+        return true;
+
+      case (button === 'Home'):
+        currentButton.removeAttribute('aria-current');
+        button.setAttribute('aria-current', 'page');
+        content.replaceChildren();
+        content.appendChild(homepage());
+        return true;
+
+      // TODO: Put the case for the 'Contact' button here
     }
   })
 })
