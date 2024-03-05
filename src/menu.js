@@ -1,7 +1,7 @@
 // TODO: Don't forget to add 'export' at the beginning of this function when this is all done, THEN import it into index.js
 // OPTION: Is there a way to refactor this code to have elements dynamically created with more loops (e.g: forEach), reducing the amount of code?
 
-function menupage () {
+export function menupage () {
   // Elements for the container of the entire menu page
   const menuPage = document.createElement('div');
   menuPage.classList.add('menu-page');
