@@ -41,7 +41,7 @@ function menupage () {
 
   let description1 = document.createElement('div');
   description1.classList.add('description-1');
-  description1.textContent = 'This scrumptious dish includes steak, grilled chicken served with sliced tomatoes, tzatziki sauce and accompanied by vine leaves and pita bread';
+  description1.textContent = 'Savory slices of succulent steak, tender grilled chicken, and flavorful lamb dance tantalizingly on the palate, each infused with the essence of Greek spices and herbs. Accompanied by vibrant slices of ripe tomatoes, crisp lettuce, and zesty onions, this culinary masterpiece is a symphony of flavors and textures. Delight your senses as you savor the harmony of grilled meats, perfectly complemented by our house-made tzatziki sauce, served alongside our (not pictured) warm, fluffy pita bread.';
   menuContent1.appendChild(description1);
 
   let price1 = document.createElement('div');
@@ -49,7 +49,7 @@ function menupage () {
   price1.textContent = '$18.00';
   menuContent1.appendChild(price1);
 
-  // TODO: Change this to a forEach method that will add this button to all menu items. Comment this out, DON'T delete (in case the method doesn't work)
+  // OPTION: Refactor this to a forEach method that will add this button to all menu items. Comment this out, DON'T delete (in case the method doesn't work)
   const orderBtn = document.createElement('button');
   const orderText = document.createTextNode('Add to Order');
   orderBtn.classList.add('order-btn');
@@ -74,16 +74,14 @@ function menupage () {
   menuContent2.classList.add('item-content-2');
   menuItem2.appendChild(menuContent2);
 
-   // TODO: Change textContent to the name of the gyro
   let itemName2 = document.createElement('div');
   itemName2.classList.add('item-name-2');
-  itemName2.textContent = 'Mixed Grill Platter';
+  itemName2.textContent = 'Grilled Chicken Gyro';
   menuContent2.appendChild(itemName2);
 
-  // TODO: Change textContent to a description of the gyro on the menu
   let description2 = document.createElement('div');
   description2.classList.add('description-2');
-  description2.textContent = 'This scrumptious dish includes steak, grilled chicken served with sliced tomatoes, tzatziki sauce and accompanied by vine leaves and pita bread';
+  description2.textContent = 'Tender, succulent strips of marinated chicken, grilled to perfection, are nestled within warm, pillowy pita bread. Each bite bursts with vibrant flavors as the chicken harmonizes with crisp lettuce, juicy tomatoes, and tangy onions, all drizzled with our signature tzatziki sauce, crafted from creamy yogurt and fresh cucumbers.';
   menuContent2.appendChild(description2);
 
   let price2 = document.createElement('div');
@@ -91,11 +89,9 @@ function menupage () {
   price2.textContent = '$11.00';
   menuContent2.appendChild(price2);
 
-  // const orderBtn = document.createElement('button');
-  // const orderText = document.createTextNode('Add to Order');
-  // orderBtn.classList.add('order-btn');
-  // orderBtn.appendChild(orderText);
-  // menuContent2.appendChild(orderBtn);
+  orderBtn.classList.add('order-btn');
+  orderBtn.appendChild(orderText);
+  menuContent2.appendChild(orderBtn);
 
   // Section that includes the image, pricing, dish description and Order button for the third menu item
   const menuItem3 = document.createElement('div');
@@ -115,16 +111,14 @@ function menupage () {
   menuContent3.classList.add('item-content-3');
   menuItem3.appendChild(menuContent3);
 
-  // TODO: Change textContent to the name of the salad
   let itemName3 = document.createElement('div');
   itemName3.classList.add('item-name-3');
-  itemName3.textContent = 'Mixed Grill Platter';
+  itemName3.textContent = 'Village Salata';
   menuContent3.appendChild(itemName3);
 
-  // TODO: Change textContent to a description of the salad on the menu
   let description3 = document.createElement('div');
   description3.classList.add('description-3');
-  description3.textContent = 'This scrumptious dish includes steak, grilled chicken served with sliced tomatoes, tzatziki sauce and accompanied by vine leaves and pita bread';
+  description3.textContent = 'This refreshing dish celebrates the freshest ingredients of the Aegean, combining plump tomatoes, crisp cucumbers, and piquant red onions in a harmonious medley of colors and textures. Enhanced with briny Kalamata olives and creamy cubes of tangy feta cheese, each bite is a symphony of flavors that evoke the sun-drenched shores of Greece. Dressed in a luscious vinaigrette crafted from extra virgin olive oil, fragrant oregano, and zesty lemon juice, this salad is a culinary ode to the Mediterranean lifestyle.';
   menuContent3.appendChild(description3);
 
   let price3 = document.createElement('div');
@@ -132,9 +126,7 @@ function menupage () {
   price3.textContent = '$10.00';
   menuContent3.appendChild(price3);
 
-  // const orderBtn = document.createElement('button');
-  // const orderText = document.createTextNode('Add to Order');
-  // orderBtn.classList.add('order-btn');
-  // orderBtn.appendChild(orderText);
-  // menuContent2.appendChild(orderBtn);
+  orderBtn.classList.add('order-btn');
+  orderBtn.appendChild(orderText);
+  menuContent2.appendChild(orderBtn);
 }
