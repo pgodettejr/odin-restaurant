@@ -46,22 +46,27 @@ nav {
   padding: 16px; */
   /* min-width: 100vw; */
   /* position: fixed; */
-}
 
-/* display: block; is possibly for animation purposes later on? */
-nav button {
-  /* display: block; */ 
-  margin: 2rem;
-  padding: 1rem 2rem;
-  border-radius: 100vw;
-}
 
-/* May need to go back to 'nav button#id' if this doesn't work. Check to make sure [aria-current] syntax is correct beforehand */
-nav button[aria-current] {
-  background: #3882F6;
-  border: 1px solid #3882F6;
-}
+/* Buttons move SLIGHTLY on transition. Research how to get it to stop (seems like it has to do with the borders when not selected) */
+  & .nav-button {
+    margin: 2rem;
+    padding: 1rem 2rem;
+    border-radius: 100vw;
+    transition: 0.3s;
+  }
 
+  & .nav-button:hover,
+    .nav-button:focus {
+    background-color: #3882F6;
+    border: 1px solid #3882F6;
+  }
+
+  & .nav-button[aria-current] {
+    background: #3882F6;
+    border: 1px solid #3882F6;
+  }
+}
 
 /* Homepage section  */
 
