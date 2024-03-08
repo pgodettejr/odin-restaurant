@@ -33,7 +33,6 @@ header {
 }
 
 /* This section will need more styling. Goal: make it look like a cross between YouTube channel nav bar and Ilios Restaurant nav bar */
-/* See KP's video on "How To Animate Tabs Step by Step" and Geekboots' similar custom navbar video, both in "Web Dev Tricks" playlist */
 /* May need to put the nav section in it's own separate div to get it to stick to the top of the page by itself (without the rest of the header) while scrolling */
 nav {
   /* display: grid; */
@@ -208,7 +207,7 @@ footer > * {
 }
 
 
-/* Menu page section  */
+/* Menu page section. May need 'display: none;' for transition or animation effect somewhere (like on .menu-page itself)  */
 
 
 .menu-page h2 {
