@@ -39,8 +39,8 @@ nav {
   /* display: grid; */
   /* grid-template-columns: 15rem 1fr; */
   gap: 4rem;
-  padding-block: 0.25rem;
-  font-size: 2rem;
+  /* padding-block: 0.125rem; */
+  font-size: 1rem;
 
   /* margin: 16px;
   padding: 16px; */
