@@ -128,4 +128,7 @@ export function menupage () {
   orderBtn.classList.add('order-btn');
   orderBtn.appendChild(orderText);
   menuContent2.appendChild(orderBtn);
+
+  // Attach entire section to existing content div
+  content.appendChild(menuPage);
 }
