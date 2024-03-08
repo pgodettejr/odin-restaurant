@@ -8,7 +8,7 @@ const content = document.getElementById('content');
 const navButtons = document.querySelectorAll('.nav-button');
 
 // Navigation bar button functionality to switch pages via tabbed browsing. 
-// TODO: None of the buttons work on click right now. Debug this!
+// TODO: The buttons work but see TypeError note at the bottom. Also, do we really need the (e) if it's never being called?
 navButtons.forEach(button => {
   button.addEventListener('click', (e) => {
     let currentButton = document.querySelector('button[aria-current]');
@@ -26,20 +26,20 @@ navButtons.forEach(button => {
     //   // TODO: Add 'else if' statement for the 'Contact' page section 
     // }
 
-    switch (true) {
-      case (button === 'Menu'):
+    switch (button.textContent) {
+      case 'Menu':
         currentButton.removeAttribute('aria-current');
         button.setAttribute('aria-current', 'page');
         content.replaceChildren();
         content.appendChild(menupage());
-        return true;
+        break;
 
-      case (button === 'Home'):
+      case 'Home':
         currentButton.removeAttribute('aria-current');
         button.setAttribute('aria-current', 'page');
         content.replaceChildren();
         content.appendChild(homepage());
-        return true;
+        break;
 
       // TODO: Put the case for the 'Contact' button here
     }
@@ -51,5 +51,5 @@ navButtons.forEach(button => {
 
 // logo.appendChild(myLogo);
 
-// Uncaught TypeError: Failed to execute 'appendChild' on 'Node': parameter 1 is not of type 'Node' <-- does this have to do with not having "webpack require" config?
+// TODO: Uncaught TypeError: Failed to execute 'appendChild' on 'Node': parameter 1 is not of type 'Node' is preventing the tabbed browsing <-- does this have to do with not having "webpack require" config?
 content.appendChild(homepage());
