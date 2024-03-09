@@ -11,6 +11,7 @@ body {
   --scrollbar-width: 0px;
   min-height: 100vh;
   font-family: "Futura", Arial, Helvetica, system-ui, sans-serif;
+  overflow-x: hidden;
   /* font-size: 10px; */
 }
 
@@ -72,7 +73,7 @@ nav {
 
 
 .media > img {
-  min-width: 99.4vw; /* OPTION: set this back to 100vw and add 'overflow-x: hidden;' to the body */
+  min-width: 100vw; /* OPTION: set this back to 100vw and add 'overflow-x: hidden;' to the body */
 }
 
 .food {
