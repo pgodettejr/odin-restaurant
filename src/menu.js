@@ -27,7 +27,7 @@ export function menupage () {
   let menuPic1 = document.createElement('img');
   menuPic1.src = 'https://cdn.pixabay.com/photo/2021/07/29/13/28/meat-6507228_1280.jpg';
   menuPic1.setAttribute('alt', 'meat-plate');
-  menuItem1.appendChild(menuPic1);
+  menuImage1.appendChild(menuPic1);
 
   let menuContent1 = document.createElement('div');
   menuContent1.classList.add('item-content-1');
@@ -67,7 +67,7 @@ export function menupage () {
   let menuPic2 = document.createElement('img');
   menuPic2.src = 'https://cdn.pixabay.com/photo/2015/03/15/13/40/gyros-674425_1280.jpg';
   menuPic2.setAttribute('alt', 'gyro');
-  menuItem2.appendChild(menuPic2);
+  menuImage2.appendChild(menuPic2);
 
   let menuContent2 = document.createElement('div');
   menuContent2.classList.add('item-content-2');
@@ -104,7 +104,7 @@ export function menupage () {
   let menuPic3 = document.createElement('img');
   menuPic3.src = 'https://cdn.pixabay.com/photo/2018/04/21/03/47/food-3337621_1280.jpg';
   menuPic2.setAttribute('alt', 'salad');
-  menuItem3.appendChild(menuPic3);
+  menuImage3.appendChild(menuPic3);
 
   let menuContent3 = document.createElement('div');
   menuContent3.classList.add('item-content-3');

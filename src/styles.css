@@ -21,7 +21,8 @@ header {
   align-items: center;
   background: #e5e7eb;
   min-width: 100vw;
-  position: fixed;
+  position: sticky;
+  top: 0px;
 }
 
 /* Logo color changes to a light green if it's smaller than 180 x 180 px */
