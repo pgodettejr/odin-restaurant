@@ -73,7 +73,7 @@ nav {
 
 
 .media > img {
-  min-width: 100vw; /* OPTION: set this back to 100vw and add 'overflow-x: hidden;' to the body */
+  min-width: 100vw;
 }
 
 .food {

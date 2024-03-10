@@ -52,6 +52,7 @@ export function menupage () {
   const orderBtn = document.createElement('button');
   const orderText = document.createTextNode('Add to Order');
   orderBtn.classList.add('order-btn');
+
   orderBtn.appendChild(orderText);
   menuContent1.appendChild(orderBtn);
 
@@ -88,7 +89,6 @@ export function menupage () {
   price2.textContent = '$11.00';
   menuContent2.appendChild(price2);
 
-  orderBtn.classList.add('order-btn');
   orderBtn.appendChild(orderText);
   menuContent2.appendChild(orderBtn);
 
