@@ -28,10 +28,12 @@ header {
 
 /* Logo color changes to a light green if it's smaller than 180 x 180 px */
 .logo > img {
-  width: 180px;
-  height: 180px;
+  width: 120px;
+  height: 120px;
   margin: 32px;
   padding: 4px;
+  border-radius: 8px;
+  background-color: rgb(4, 155, 155);
 }
 
 /* This section will need more styling. Goal: make it look like a cross between YouTube channel nav bar and Ilios Restaurant nav bar */
