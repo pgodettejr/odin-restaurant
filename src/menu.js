@@ -1,6 +1,6 @@
 // OPTION: Is there a way to refactor this code to have elements dynamically created with more loops (e.g: forEach), reducing the amount of code?
 
-export function menupage () {
+export function menupage() {
   // Elements for the container of the entire menu page
   const menuPage = document.createElement('div');
   menuPage.classList.add('menu-page');
