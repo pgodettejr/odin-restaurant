@@ -30,11 +30,11 @@ export function menupage () {
   menuImage1.appendChild(menuPic1);
 
   let menuContent1 = document.createElement('div');
-  menuContent1.classList.add('item-content-1');
+  menuContent1.classList.add('content-1');
   menuItem1.appendChild(menuContent1);
 
   let itemName1 = document.createElement('div');
-  itemName1.classList.add('item-name-1');
+  itemName1.classList.add('name-1');
   itemName1.textContent = 'Mixed Grill Platter';
   menuContent1.appendChild(itemName1);
 
@@ -48,13 +48,12 @@ export function menupage () {
   price1.textContent = '$18.00';
   menuContent1.appendChild(price1);
 
-  // OPTION: Refactor this to a forEach method that will add this button to all menu items. Comment this out, DON'T delete (in case the method doesn't work)
-  const orderBtn = document.createElement('button');
-  const orderText = document.createTextNode('Add to Order');
-  orderBtn.classList.add('order-btn');
+  const orderBtn1 = document.createElement('button');
+  const orderText1 = document.createTextNode('Add to Order');
+  orderBtn1.classList.add('order-btn-1');
 
-  orderBtn.appendChild(orderText);
-  menuContent1.appendChild(orderBtn);
+  orderBtn1.appendChild(orderText1);
+  menuContent1.appendChild(orderBtn1);
 
   // Section that includes the image, pricing, dish description and Order button for the second menu item
   const menuItem2 = document.createElement('div');
@@ -71,11 +70,11 @@ export function menupage () {
   menuImage2.appendChild(menuPic2);
 
   let menuContent2 = document.createElement('div');
-  menuContent2.classList.add('item-content-2');
+  menuContent2.classList.add('content-2');
   menuItem2.appendChild(menuContent2);
 
   let itemName2 = document.createElement('div');
-  itemName2.classList.add('item-name-2');
+  itemName2.classList.add('name-2');
   itemName2.textContent = 'Grilled Chicken Gyro';
   menuContent2.appendChild(itemName2);
 
@@ -89,8 +88,12 @@ export function menupage () {
   price2.textContent = '$11.00';
   menuContent2.appendChild(price2);
 
-  orderBtn.appendChild(orderText);
-  menuContent2.appendChild(orderBtn);
+  const orderBtn2 = document.createElement('button');
+  const orderText2 = document.createTextNode('Add to Order');
+  orderBtn2.classList.add('order-btn-2');
+
+  orderBtn2.appendChild(orderText2);
+  menuContent2.appendChild(orderBtn2);
 
   // Section that includes the image, pricing, dish description and Order button for the third menu item
   const menuItem3 = document.createElement('div');
@@ -107,11 +110,11 @@ export function menupage () {
   menuImage3.appendChild(menuPic3);
 
   let menuContent3 = document.createElement('div');
-  menuContent3.classList.add('item-content-3');
+  menuContent3.classList.add('content-3');
   menuItem3.appendChild(menuContent3);
 
   let itemName3 = document.createElement('div');
-  itemName3.classList.add('item-name-3');
+  itemName3.classList.add('name-3');
   itemName3.textContent = 'Village Salata';
   menuContent3.appendChild(itemName3);
 
@@ -125,10 +128,26 @@ export function menupage () {
   price3.textContent = '$10.00';
   menuContent3.appendChild(price3);
 
-  orderBtn.classList.add('order-btn');
-  orderBtn.appendChild(orderText);
-  menuContent2.appendChild(orderBtn);
+  const orderBtn3 = document.createElement('button');
+  const orderText3 = document.createTextNode('Add to Order');
+  orderBtn3.classList.add('order-btn-3');
+
+  orderBtn3.appendChild(orderText3);
+  menuContent3.appendChild(orderBtn3);
+
+  // OPTION: My attempt to refactor button generation to a forEach method that will add the buttons to all menu items.
+  // const menuItems = document.querySelectorAll("div[class^=item-]");
+
+  // const orderButtons = ['Add To Order'];
+
+  // orderButtons.forEach(orderButton => {
+  //   const orderBtn = document.createElement('button');
+  //   orderBtn.textContent = orderButton;
+  //   orderBtn.classList.add('order-btn');
+  //   menuItems.appendChild(orderBtn);
+  // });
 
   // Attach entire section to existing content div
+  
   content.appendChild(menuPage);
 }

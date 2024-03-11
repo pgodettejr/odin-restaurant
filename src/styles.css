@@ -248,12 +248,12 @@ div[class*="content"] {
   align-content: center;
   gap: 1rem;
 
-  & div[class^="item-name"],
-  div[class^="price"] {
+  & div[class^="name-"],
+  div[class^="price-"] {
     font-weight: 800;
   }
 
-  & .order-btn {
+  & button {
     background: #3882F6;
     border: 1px solid #3882F6;
     border-radius: 8px;
