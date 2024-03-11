@@ -148,6 +148,5 @@ export function menupage () {
   // });
 
   // Attach entire section to existing content div
-  
   content.appendChild(menuPage);
 }
