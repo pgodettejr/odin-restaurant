@@ -51,7 +51,4 @@ navButtons.forEach(button => {
 
 // logo.appendChild(myLogo);
 
-// console.log(typeof homepage); <-- The type is a function
-
-// TODO: Uncaught TypeError: Failed to execute 'appendChild' on 'Node': parameter 1 is not of type 'Node' is preventing the tabbed browsing <-- does this have to do with not having "webpack require" config? Or is a function not considered a Node for the appendChild method?
 content.appendChild(homepage());

@@ -1,7 +1,7 @@
 // OPTION: Is there a way to refactor this code to have elements dynamically created with more loops (e.g: forEach), reducing the amount of code?
 
 export function menupage() {
-  // Elements for the container of the entire menu page
+  // Elements for the container of all the elements within the menu page
   const menuPage = document.createElement('div');
   menuPage.classList.add('menu-page');
 
@@ -147,6 +147,6 @@ export function menupage() {
   //   menuItems.appendChild(orderBtn);
   // });
 
-  // Attach entire section to existing content div
-  content.appendChild(menuPage);
+  // Returns the menu page container with all menu page elements
+  return menuPage;
 }

@@ -1,5 +1,9 @@
 export function homepage() {
-  // Generates different sections of the home page under 'content' div
+  // Container for all home page elements 
+  const homeContent = document.createElement('div');
+  homeContent.classList.add('home-content');
+
+  // Generates different sections of the home page under 'home-content' div
   const media = document.createElement('div');
   const food = document.createElement('div');
   const about = document.createElement('div');
@@ -116,11 +120,14 @@ export function homepage() {
   galleryInfo.appendChild(gallery3);
   galleryInfo.appendChild(gallery4);
 
-  // Attaching all main sections (Media, Our Philosophy, About Us, Testimonial, Gallery) to the existing content div
-  content.appendChild(media);
-  content.appendChild(food);
-  content.appendChild(about);
-  content.appendChild(testimonial);
-  content.appendChild(galleryHeader);
-  content.appendChild(galleryInfo);
+  // Attaching all main sections (Media, Our Philosophy, About Us, Testimonial, Gallery) to the existing home-content div.
+  homeContent.appendChild(media);
+  homeContent.appendChild(food);
+  homeContent.appendChild(about);
+  homeContent.appendChild(testimonial);
+  homeContent.appendChild(galleryHeader);
+  homeContent.appendChild(galleryInfo);
+
+  // Returns the home content container with all home page elements (now leaves a bar behind between each section - fix with CSS?)
+  return homeContent;
 }
