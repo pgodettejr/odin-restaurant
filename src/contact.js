@@ -1,3 +1,4 @@
+// TODO: Don't forget to export this function, then import into index.js the same way that Home and Menu were done
 function contactPage() {
   // Container for all Contact page elements
   const contactSection = document.createElement('div');
@@ -71,7 +72,7 @@ function contactPage() {
   // Message section of the form goes below this line
   // TODO: Research/read docs on how to set up a Message box properly
 
-  
+
 
   // Submit button for the form
   const submitBtn = document.createElement('button');
