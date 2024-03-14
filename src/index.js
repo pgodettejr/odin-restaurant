@@ -2,13 +2,14 @@ import './styles.css';
 // import Wreath from './img/wreath-6524584_640.png';
 import { homepage } from './home.js';
 import { menupage } from './menu.js';
+import { contactPage } from './contact.js';
 
 // const logo = document.querySelector('.logo');
 const content = document.getElementById('content');
 const navButtons = document.querySelectorAll('.nav-button');
 
 // Navigation bar button functionality to switch pages via tabbed browsing. 
-// TODO: The buttons work but see TypeError note at the bottom. Also, do we really need the (e) if it's never being called?
+// TODO: Do we really need the (e) if it's never being called?
 navButtons.forEach(button => {
   button.addEventListener('click', (e) => {
     let currentButton = document.querySelector('button[aria-current]');
@@ -41,7 +42,12 @@ navButtons.forEach(button => {
         content.appendChild(homepage());
         break;
 
-      // TODO: Put the case for the 'Contact' button here
+      case 'Contact':
+        currentButton.removeAttribute('aria-current');
+        button.setAttribute('aria-current', 'page');
+        content.replaceChildren();
+        content.appendChild(contactPage());
+        break;
     }
   })
 })

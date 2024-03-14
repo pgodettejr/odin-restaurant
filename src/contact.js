@@ -1,5 +1,4 @@
-// TODO: Don't forget to export this function, then import into index.js the same way that Home and Menu were done
-function contactPage() {
+export function contactPage() {
   // Container for all Contact page elements
   const contactSection = document.createElement('div');
   contactSection.classList.add('contact-page');
@@ -39,7 +38,6 @@ function contactPage() {
   formColumn1.appendChild(formLabel1, formInput1);
 
   // Email section of the form
-  // TODO: Check to see if there are any different requirements for an e-mail section of the form (like the 'type' attribute, etc)
   const formColumn2 = document.createElement('div');
   formColumn2.setAttribute('id', 'form-col-2');
   contactForm.appendChild(formColumn2);
@@ -49,7 +47,7 @@ function contactPage() {
   formLabel2.textContent = 'E-Mail';
 
   const formInput2 = document.createElement('input');
-  multiAttributes(formInput2, {"type": "text", "name": "contact-email", "id": "contact-email"});
+  multiAttributes(formInput2, {"type": "email", "name": "contact-email", "id": "contact-email", "placeholder": "your-name@example.com"});
   formInput2.required = true;
 
   formColumn2.appendChild(formLabel2, formInput2);
@@ -70,9 +68,18 @@ function contactPage() {
   formColumn3.appendChild(formLabel3, formInput3);
 
   // Message section of the form goes below this line
-  // TODO: Research/read docs on how to set up a Message box properly
+  const formColumn4 = document.createElement('div');
+  formColumn4.setAttribute('id', 'form-col-4');
+  contactForm.appendChild(formColumn4);
 
+  const formLabel4 = document.createElement('label');
+  formLabel4.setAttribute('for', 'contact-message');
+  formLabel4.textContent = 'Message';
 
+  const formTextArea = document.createElement('textarea');
+  multiAttributes(formTextArea, {"name": "contact-message", "id": "contact-message"});
+  formTextArea.placeholder = 'Type your message here'; // TODO: This might need to be 'textContent' instead of 'placeholder'
+  formTextArea.required = true;
 
   // Submit button for the form
   const submitBtn = document.createElement('button');
@@ -83,7 +90,8 @@ function contactPage() {
   contactForm.appendChild(submitBtn);
 
 
-  // // My attempt to make multiple containers at once to house each form section in, but couldn't figure out how to add the sections themselves under each div created
+  // // BRANCH: My attempt to make multiple containers at once to house each form section in, but couldn't figure out how to add the sections themselves under each div created
+  // // BRANCH: Try to figure out how to write this in another type of for loop (like for in/of above). See Library project as an example (would need to add label/input as well)
   // function formColumns() {
   //   for (let i = 0; i < 4; i++) {
   //     const formColumn = document.createElement('div');
