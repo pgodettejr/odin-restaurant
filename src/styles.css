@@ -12,7 +12,6 @@ body {
   min-height: 100vh;
   font-family: "Futura", Arial, Helvetica, system-ui, sans-serif;
   overflow-x: hidden;
-  /* font-size: 10px; */
 }
 
 header {
@@ -36,22 +35,12 @@ header {
   background-color: rgb(4, 155, 155);
 }
 
-/* This section will need more styling. Goal: make it look like a cross between YouTube channel nav bar and Ilios Restaurant nav bar */
-/* May need to put the nav section in it's own separate div to get it to stick to the top of the page by itself (without the rest of the header) while scrolling */
+/* Nav bar section. Goal was to make it look like a cross between a YouTube channel nav bar and Ilios Restaurant nav bar */
 nav {
-  /* display: grid; */
-  /* grid-template-columns: 15rem 1fr; */
   gap: 4rem;
-  /* padding-block: 0.125rem; */
   font-size: 1rem;
 
-  /* margin: 16px;
-  padding: 16px; */
-  /* min-width: 100vw; */
-  /* position: fixed; */
-
-
-/* Buttons move SLIGHTLY on transition. Research how to get it to stop (seems like it has to do with the borders when not selected) */
+  /* Buttons move SLIGHTLY on transition. Research how to get it to stop (seems like it has to do with the borders when not selected) */
   & .nav-button {
     margin: 2rem;
     padding: 1rem 2rem;
@@ -173,7 +162,6 @@ nav {
   margin: 64px;
   padding: 64px;
   text-align: center;
-  /* background: #e5e7eb; */
 }
 
 .gallery-info {
@@ -183,7 +171,6 @@ nav {
   margin-top: 32px;
   margin-bottom: 120px;
   gap: 64px;
-  /* background: #e5e7eb; */
 }
 
 .gallery-info > div[class^="gallery-"] > img {
@@ -287,7 +274,7 @@ div[class*="content"] {
   gap: 2rem;
 
   border-radius: 8px;
-  width: 20%;
+  width: 20%; /* TODO: Research why form elements take up the entire width of a page and how to correct it OTHER than this property */
   margin: 0 auto;
 
   & p {
@@ -300,8 +287,9 @@ div[class*="content"] {
     border: 1px solid #3882F6;
     border-radius: 8px;
     font-size: 20px;
-    margin-top: 0.25em;
+    margin: 2rem;
     padding: 1rem 2rem;
+    display: inline-block;
   }
 
   & .submit-btn:hover {
@@ -310,9 +298,25 @@ div[class*="content"] {
 }
 
 label, input {
-  display: block;
+  display: inline-block;
   padding: 0;
   margin: 10px 0;
-  width: 80%;
+  width: 450px;
   height: auto;
+}
+
+input,
+textarea {
+  box-sizing: border-box;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #000;
+}
+
+textarea {
+  vertical-align: top;
+  width: 450px;
+  height: 5em;
 }

@@ -25,12 +25,6 @@ export function homepage() {
   mediaImage.setAttribute = ('alt', 'restaurant-pic-1');
   media.appendChild(mediaImage);
 
-  // Background image, header, text and Menu section button for the 'Our Philosophy' section of the homepage
-  // let foodImage = document.createElement('img');
-  // foodImage.src = 'https://cdn.pixabay.com/photo/2017/11/08/19/01/table-2931360_1280.jpg';
-  // foodImage.setAttribute('alt', 'restaurant-pic-2');
-  // food.appendChild(foodImage);
-
   const foodHeader = document.createElement('h2');
   foodHeader.textContent = 'Our Philosophy';
   food.appendChild(foodHeader);
@@ -80,7 +74,7 @@ export function homepage() {
   let gallery3 = document.createElement('div');
   let gallery4 = document.createElement('div');
 
-  // OPTION: Possibly change this section to a forEach method for the gallery divs (add a class to each one and/or add unique images to each)?
+  // BRANCH: Possibly change this section to a forEach method for the gallery divs (add a class to each one and/or add unique images to each)?
   gallery1.classList.add('gallery-1');
   gallery2.classList.add('gallery-2');
   gallery3.classList.add('gallery-3');
@@ -106,8 +100,8 @@ export function homepage() {
   galleryPic4.setAttribute('alt', 'table');
   gallery4.appendChild(galleryPic4);
 
-  // Subtext divs for the 'Gallery' section. Trying to implement a forEach method for these as they will be empty divs with a class of 'subtext'
-  // TODO: Inspect DevTools and make sure this current loop is set up correctly in the HTML/DOM
+  // Subtext divs for the 'Gallery' section
+  // TODO: Inspect DevTools and make sure this current loop is set up correctly in the HTML/DOM. Should create empty divs with a class of 'subtext' (with no text currently).
   document.querySelectorAll('div[class^="gallery-"]').forEach((element) => {
     let subtext = document.createElement('div');
     subtext.classList.add('subtext');

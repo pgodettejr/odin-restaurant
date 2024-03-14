@@ -11,7 +11,6 @@ export function contactPage() {
   // Contact form containing all form elements
   const contactForm = document.createElement('form');
 
-  // TODO: Double check this function to make sure the attributes on the 'form' element are set correctly. If not, we have to do it the 'long way'.
   function multiAttributes(elem, elemAttributes) {
     for (let i in elemAttributes) {
       elem.setAttribute(i, elemAttributes[i]);
@@ -21,8 +20,6 @@ export function contactPage() {
   multiAttributes(contactForm, {"action": "", "method": "get", "id": "contact-form"});
 
   contactSection.appendChild(contactForm);
-
-  // TODO: Input areas are not showing up at all in any of the form sections. Textarea is not showing up for the Message section either.
 
   // Name section of the form
   const formColumn1 = document.createElement('div');
@@ -83,7 +80,7 @@ export function contactPage() {
 
   const formTextArea = document.createElement('textarea');
   multiAttributes(formTextArea, {"name": "contact-message", "id": "contact-message"});
-  formTextArea.placeholder = 'Type your message here'; // TODO: This might need to be 'textContent' instead of 'placeholder'
+  formTextArea.placeholder = 'Type your message here';
   formTextArea.required = true;
 
   formColumn4.appendChild(formLabel4);

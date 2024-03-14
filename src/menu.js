@@ -1,4 +1,4 @@
-// OPTION: Is there a way to refactor this code to have elements dynamically created with more loops (e.g: forEach), reducing the amount of code?
+// BRANCH: Is there a way to refactor this code to have elements dynamically created with more loops (e.g: forEach), reducing the amount of code?
 
 export function menupage() {
   // Elements for the container of all the elements within the menu page
@@ -135,7 +135,7 @@ export function menupage() {
   orderBtn3.appendChild(orderText3);
   menuContent3.appendChild(orderBtn3);
 
-  // OPTION: My attempt to refactor button generation to a forEach method that will add the buttons to all menu items.
+  // BRANCH: My attempt to refactor button generation to a forEach method that will add the buttons to all menu items.
   // const menuItems = document.querySelectorAll("div[class^=item-]");
 
   // const orderButtons = ['Add To Order'];
