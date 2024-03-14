@@ -22,6 +22,8 @@ export function contactPage() {
 
   contactSection.appendChild(contactForm);
 
+  // TODO: Input areas are not showing up at all in any of the form sections. Textarea is not showing up for the Message section either.
+
   // Name section of the form
   const formColumn1 = document.createElement('div');
   formColumn1.setAttribute('id', 'form-col-1');
@@ -35,7 +37,8 @@ export function contactPage() {
   multiAttributes(formInput1, {"type": "text", "name": "contact-name", "id": "contact-name"});
   formInput1.required = true;
 
-  formColumn1.appendChild(formLabel1, formInput1);
+  formColumn1.appendChild(formLabel1);
+  formColumn1.appendChild(formInput1);
 
   // Email section of the form
   const formColumn2 = document.createElement('div');
@@ -50,7 +53,8 @@ export function contactPage() {
   multiAttributes(formInput2, {"type": "email", "name": "contact-email", "id": "contact-email", "placeholder": "your-name@example.com"});
   formInput2.required = true;
 
-  formColumn2.appendChild(formLabel2, formInput2);
+  formColumn2.appendChild(formLabel2);
+  formColumn2.appendChild(formInput2);
 
   // Subject/Title section of the form
   const formColumn3 = document.createElement('div');
@@ -65,7 +69,8 @@ export function contactPage() {
   multiAttributes(formInput3, {"type": "text", "name": "contact-subject", "id": "contact-subject"});
   formInput3.required = true;
 
-  formColumn3.appendChild(formLabel3, formInput3);
+  formColumn3.appendChild(formLabel3);
+  formColumn3.appendChild(formInput3);
 
   // Message section of the form goes below this line
   const formColumn4 = document.createElement('div');
@@ -80,6 +85,9 @@ export function contactPage() {
   multiAttributes(formTextArea, {"name": "contact-message", "id": "contact-message"});
   formTextArea.placeholder = 'Type your message here'; // TODO: This might need to be 'textContent' instead of 'placeholder'
   formTextArea.required = true;
+
+  formColumn4.appendChild(formLabel4);
+  formColumn4.appendChild(formTextArea);
 
   // Submit button for the form
   const submitBtn = document.createElement('button');
