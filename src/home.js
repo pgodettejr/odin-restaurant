@@ -101,7 +101,7 @@ export function homepage() {
   gallery4.appendChild(galleryPic4);
 
   // Subtext divs for the 'Gallery' section
-  // TODO: Inspect DevTools and make sure this current loop is set up correctly in the HTML/DOM. Should create empty divs with a class of 'subtext' (with no text currently).
+  // BRANCH: Inspect DevTools and make sure this current loop is set up correctly in the HTML/DOM. Should create empty divs with a class of 'subtext' (with no text currently).
   document.querySelectorAll('div[class^="gallery-"]').forEach((element) => {
     let subtext = document.createElement('div');
     subtext.classList.add('subtext');

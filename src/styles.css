@@ -5,7 +5,7 @@
 }
 
 /* White and some kind of light blue or teal for the colorway/"branding" */
-/* html { color-scheme: dark } */
+html { color-scheme: dark }
 
 body {
   --scrollbar-width: 0px;
@@ -60,10 +60,12 @@ nav {
   }
 }
 
+
 /* Homepage section. BRANCH: need to get rid of the lines/bars separating each section via CSS due to having to add 'home-content' div as a container to fix page errors  */
 
 .home-content {
   animation: fade 1s;
+  /* BRANCH: May need 'display: none;' for sliding transition or animation effect here */
 }
 
 .media > img {
@@ -201,7 +203,7 @@ footer > * {
 }
 
 
-/* Menu page section. BRANCH: May need 'display: none;' for transition or animation effect somewhere (like on .menu-page itself)  */
+/* Menu page section. BRANCH: May need 'display: none;' for sliding transition or animation effect somewhere (like on .menu-page itself)  */
 
 .menu-page {
   padding: 3rem;
@@ -258,7 +260,7 @@ div[class*="content"] {
 }
 
 
-/* Contact page section. BRANCH: May need 'display: none;' for transition or animation effect somewhere (like on .contact-page itself) */
+/* Contact page section. BRANCH: May need 'display: none;' for sliding transition or animation effect somewhere (like on .contact-page itself) */
 
 .contact-page {
   padding: 3rem;

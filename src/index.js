@@ -3,7 +3,6 @@ import { homepage } from './home.js';
 import { menupage } from './menu.js';
 import { contactPage } from './contact.js';
 
-// const logo = document.querySelector('.logo');
 const content = document.getElementById('content');
 const navButtons = document.querySelectorAll('.nav-button');
 
