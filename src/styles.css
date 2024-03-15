@@ -62,6 +62,9 @@ nav {
 
 /* Homepage section. BRANCH: need to get rid of the lines/bars separating each section via CSS due to having to add 'home-content' div as a container to fix page errors  */
 
+.home-content {
+  display: none;
+}
 
 .media > img {
   min-width: 100vw;
@@ -202,6 +205,7 @@ footer > * {
 
 .menu-page {
   padding: 3rem;
+  display: none;
 
   & h2 {
     text-align: center;
@@ -258,6 +262,7 @@ div[class*="content"] {
 
 .contact-page {
   padding: 3rem;
+  display: none;
 
   & h2 {
     text-align: center;
@@ -318,4 +323,23 @@ textarea {
   vertical-align: top;
   width: 450px;
   height: 5em;
+}
+
+@keyframes slide-right {
+  from {
+    margin-left: -100%;
+  }
+  to {
+    margin-left: 0%;
+  }
+}
+
+@keyframes slide-left {
+  from {
+    margin-left: 0%;
+  }
+  to {
+    margin-left: -100;
+    display: none;
+  }
 }

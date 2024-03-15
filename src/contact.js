@@ -1,4 +1,4 @@
-export function contactPage() {
+export function contactPage(e) {
   // Container for all Contact page elements
   const contactSection = document.createElement('div');
   contactSection.classList.add('contact-page');
@@ -94,7 +94,8 @@ export function contactPage() {
   submitBtn.appendChild(submitBtnText);
   contactForm.appendChild(submitBtn);
 
-
+  e.preventDefault();
+  
   // // BRANCH: My attempt to make multiple containers at once to house each form section in, but couldn't figure out how to add the sections themselves under each div created
   // // BRANCH: Try to figure out how to write this in another type of for loop (like for in/of above). See Library project as an example (would need to add label/input as well)
   // function formColumns() {
