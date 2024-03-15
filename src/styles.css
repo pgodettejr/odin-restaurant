@@ -40,7 +40,7 @@ nav {
   gap: 4rem;
   font-size: 1rem;
 
-  /* Buttons move SLIGHTLY on transition. Research how to get it to stop (seems like it has to do with the borders when not selected) */
+  /* BRANCH: Buttons move SLIGHTLY on transition. Research how to get it to stop (seems like it has to do with the borders when not selected) */
   & .nav-button {
     margin: 2rem;
     padding: 1rem 2rem;
@@ -50,17 +50,17 @@ nav {
 
   & .nav-button:hover,
     .nav-button:focus {
-    background-color: #3882F6;
-    border: 1px solid #3882F6;
+    background-color: rgb(4, 195, 195);
+    border: 1px solid rgb(4, 195, 195);
   }
 
   & .nav-button[aria-current] {
-    background: #3882F6;
-    border: 1px solid #3882F6;
+    background: rgb(4, 155, 155);
+    border: 1px solid rgb(4, 155, 155);
   }
 }
 
-/* Homepage section. TODO: need to get rid of the lines/bars separating each section via CSS due to having to add 'home-content' div as a container to fix page errors  */
+/* Homepage section. BRANCH: need to get rid of the lines/bars separating each section via CSS due to having to add 'home-content' div as a container to fix page errors  */
 
 
 .media > img {
@@ -97,8 +97,8 @@ nav {
 }
 
 .big-menu-button {
-  background: #3882F6;
-  border: 1px solid #3882F6;
+  background: rgb(4, 155, 155);
+  border: 1px solid rgb(4, 155, 155);
   border-radius: 8px;
   font-size: 32px;
   font-weight: 800;
@@ -118,7 +118,6 @@ nav {
 .about > * {
   font-size: 36px;
   font-weight: 100;
-  color: #3882F6;
   margin: 64px;
   padding: 64px;
   max-width: 900px;
@@ -133,7 +132,7 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #3882F6;
+  background: rgb(4, 155, 155);
   text-align: center;
 }
 
@@ -186,7 +185,7 @@ footer {
   max-width: 100%;
   margin: 0 auto;
   padding: 3rem;
-  background: #3882F6;
+  background: rgb(4, 155, 155);
 }
 
 footer > * {
@@ -199,7 +198,7 @@ footer > * {
 }
 
 
-/* Menu page section. May need 'display: none;' for transition or animation effect somewhere (like on .menu-page itself)  */
+/* Menu page section. BRANCH: May need 'display: none;' for transition or animation effect somewhere (like on .menu-page itself)  */
 
 .menu-page {
   padding: 3rem;
@@ -241,8 +240,8 @@ div[class*="content"] {
   }
 
   & button {
-    background: #3882F6;
-    border: 1px solid #3882F6;
+    background: rgb(4, 155, 155);
+    border: 1px solid rgb(4, 155, 155);
     border-radius: 8px;
     font-size: 20px;
     margin-top: 0.25em;
@@ -250,12 +249,12 @@ div[class*="content"] {
   }
 
   & button:hover {
-    background: #7aadff;
+    background: rgb(4, 195, 195);
   }
 }
 
 
-/* Contact page section. May need 'display: none;' for transition or animation effect somewhere (like on .contact-page itself) */
+/* Contact page section. BRANCH: May need 'display: none;' for transition or animation effect somewhere (like on .contact-page itself) */
 
 .contact-page {
   padding: 3rem;
@@ -274,7 +273,7 @@ div[class*="content"] {
   gap: 2rem;
 
   border-radius: 8px;
-  width: 20%; /* TODO: Research why form elements take up the entire width of a page and how to correct it OTHER than this property */
+  width: 20%; /* BRANCH: Research why form elements take up the entire width of a page and how to correct it OTHER than this property */
   margin: 0 auto;
 
   & p {
@@ -283,8 +282,8 @@ div[class*="content"] {
   }
 
   & .submit-btn {
-    background: #3882F6;
-    border: 1px solid #3882F6;
+    background: rgb(4, 155, 155);
+    border: 1px solid rgb(4, 155, 155);
     border-radius: 8px;
     font-size: 20px;
     margin: 2rem;
@@ -293,7 +292,7 @@ div[class*="content"] {
   }
 
   & .submit-btn:hover {
-    background: #7aadff;
+    background: rgb(4, 195, 195);
   }
 }
 

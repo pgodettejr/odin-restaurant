@@ -9,7 +9,7 @@ const content = document.getElementById('content');
 const navButtons = document.querySelectorAll('.nav-button');
 
 // Navigation bar button functionality to switch pages via tabbed browsing. 
-// TODO: Do we really need the (e) if it's never being called?
+// BRANCH: Do we really need the (e) if it's never being called?
 navButtons.forEach(button => {
   button.addEventListener('click', (e) => {
     let currentButton = document.querySelector('button[aria-current]');
