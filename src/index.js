@@ -1,5 +1,4 @@
 import './styles.css';
-// import Wreath from './img/wreath-6524584_640.png';
 import { homepage } from './home.js';
 import { menupage } from './menu.js';
 import { contactPage } from './contact.js';
@@ -8,74 +7,11 @@ import { contactPage } from './contact.js';
 const content = document.getElementById('content');
 const navButtons = document.querySelectorAll('.nav-button');
 
-// BRANCH: Function for the sliding animations on button click
-function slide() {
-  const menu = document.querySelector('.menu-page');
-  const contact = document.querySelector('.contact-page');
-  const home = document.querySelector('.home-content');
-
-  menu.addEventListener("animationend", function(e) {
-    e.preventDefault();
-
-    if (menu.style.animationName == "slide-left" ||
-        menu.style.animationName == "slide-right") {
-          menu.style.display = "none";
-    }
-  });
-
-  if (menu.style.display === "none" &&
-      button.textContent === "Home") {
-        menu.style.display = "block";
-        menu.style.animation = "1s slide-left";
-  } else {
-    menu.style.animation = "1s slide-right";
-  }
-
-  contact.addEventListener("animationend", function(e) {
-    e.preventDefault();
-
-    if (contact.style.animationName == "slide-left") {
-          contact.style.display = "none";
-    }
-  });
-
-  if (contact.style.display === "none") {
-    contact.style.display = "block";
-    contact.style.animation = "1s slide-left";
-  }
-
-  home.addEventListener("animationend", function(e) {
-    e.preventDefault();
-
-    if (home.style.animationName == "slide-right") {
-          home.style.display = "none";
-    }
-  });
-
-  if (home.style.display === "none") {
-    home.style.display = "block";
-    home.style.animation = "1s slide-right";
-  }
-}
-
 // Navigation bar button functionality to switch pages via tabbed browsing. 
 // BRANCH: Do we really need the (e) if it's never being called?
 navButtons.forEach(button => {
   button.addEventListener('click', (e) => {
     let currentButton = document.querySelector('button[aria-current]');
-
-    // if (button === 'Menu') {
-    //   currentButton.removeAttribute('aria-current');
-    //   button.setAttribute('aria-current', 'page');
-    //   content.replaceChildren();
-    //   content.appendChild(menupage());
-    // } else if (button === 'Home') {
-    //   currentButton.removeAttribute('aria-current');
-    //   button.setAttribute('aria-current', 'page');
-    //   content.replaceChildren();
-    //   content.appendChild(homepage());
-    //   // TODO: Add 'else if' statement for the 'Contact' page section 
-    // }
 
     switch (button.textContent) {
       case 'Menu':
@@ -83,7 +19,7 @@ navButtons.forEach(button => {
         button.setAttribute('aria-current', 'page');
         content.replaceChildren();
         content.appendChild(menupage());
-        slide();
+        // slide();
         break;
 
       case 'Home':
@@ -91,7 +27,7 @@ navButtons.forEach(button => {
         button.setAttribute('aria-current', 'page');
         content.replaceChildren();
         content.appendChild(homepage());
-        slide();
+        // slide();
         break;
 
       case 'Contact':
@@ -99,15 +35,60 @@ navButtons.forEach(button => {
         button.setAttribute('aria-current', 'page');
         content.replaceChildren();
         content.appendChild(contactPage());
-        slide();
+        // slide();
         break;
     }
   })
 })
 
-// const myLogo = new Image();
-// myLogo.src = Wreath;
-
-// logo.appendChild(myLogo);
-
 content.appendChild(homepage());
+
+// BRANCH: Attempted function for a sliding animation on button click
+// function slide() {
+//   const menu = document.querySelector('.menu-page');
+//   const contact = document.querySelector('.contact-page');
+//   const home = document.querySelector('.home-content');
+
+//   menu.addEventListener("animationend", function(e) {
+//     e.preventDefault();
+
+//     if (menu.style.animationName == "slide-left" ||
+//         menu.style.animationName == "slide-right") {
+//           menu.style.display = "none";
+//     }
+//   });
+
+//   if (menu.style.display === "none" &&
+//       button.textContent === "Home") {
+//         menu.style.display = "block";
+//         menu.style.animation = "1s slide-left";
+//   } else {
+//     menu.style.animation = "1s slide-right";
+//   }
+
+//   contact.addEventListener("animationend", function(e) {
+//     e.preventDefault();
+
+//     if (contact.style.animationName == "slide-left") {
+//           contact.style.display = "none";
+//     }
+//   });
+
+//   if (contact.style.display === "none") {
+//     contact.style.display = "block";
+//     contact.style.animation = "1s slide-left";
+//   }
+
+//   home.addEventListener("animationend", function(e) {
+//     e.preventDefault();
+
+//     if (home.style.animationName == "slide-right") {
+//           home.style.display = "none";
+//     }
+//   });
+
+//   if (home.style.display === "none") {
+//     home.style.display = "block";
+//     home.style.animation = "1s slide-right";
+//   }
+// }
