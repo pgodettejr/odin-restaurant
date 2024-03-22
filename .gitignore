@@ -1,2 +1,5 @@
 # Ignore node_modules folder
 node_modules
+
+# Except this one
+transformIgnorePatterns: ['/node_modules\/(?!cjs.js)(.*)']
