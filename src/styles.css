@@ -18,7 +18,7 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: #e5e7eb;
+  background: #1F2937;
   min-width: 100vw;
   position: sticky;
   top: 0px;
@@ -78,7 +78,7 @@ nav {
   align-items: center;
   text-align: center;
 
-  background-color: lightgray;
+  background-color: darkgray;
   background-image: url('https://cdn.pixabay.com/photo/2017/11/08/19/01/table-2931360_1280.jpg');
   background-repeat: no-repeat;
   background-size: cover;
@@ -89,7 +89,7 @@ nav {
 .food > * {
   font-size: 36px;
   font-weight: 100;
-  color: #1F2937;
+  /* color: #1F2937; */
   margin: 64px;
   padding: 64px;
   max-width: 900px;
@@ -116,7 +116,7 @@ nav {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background: #e5e7eb;
+  background: #009746;
 }
 
 .about > * {

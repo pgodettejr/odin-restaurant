@@ -63,6 +63,7 @@ export function homepage() {
   quote.appendChild(author);
   testimonial.appendChild(quote);
 
+  // BRANCH: Add a container for the entire Gallery section to place all Gallery elements under, then set the background color for that container in the CSS
   // Header element for 'Gallery' section
   const galleryHeaderText = document.createElement('h2');
   galleryHeaderText.textContent = 'Gallery';
