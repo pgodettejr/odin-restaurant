@@ -8,16 +8,14 @@ export function homepage() {
   const food = document.createElement('div');
   const about = document.createElement('div');
   const testimonial = document.createElement('div');
-  const galleryHeader = document.createElement('div');
-  const galleryInfo = document.createElement('div');
+  const gallery = document.createElement('div');
 
   // Classes for each section
   media.classList.add('media');
   food.classList.add('food');
   about.classList.add('about');
   testimonial.classList.add('testimonial');
-  galleryHeader.classList.add('gallery-header');
-  galleryInfo.classList.add('gallery-info');
+  gallery.classList.add('gallery');
 
   // Image for the 'media' section of the homepage
   let mediaImage = document.createElement('img');
@@ -64,12 +62,18 @@ export function homepage() {
   testimonial.appendChild(quote);
 
   // BRANCH: Add a container for the entire Gallery section to place all Gallery elements under, then set the background color for that container in the CSS
-  // Header element for 'Gallery' section
+
+  // Header elements for 'Gallery' section
+  const galleryHeader = document.createElement('div');
+  galleryHeader.classList.add('gallery-header');
+
   const galleryHeaderText = document.createElement('h2');
   galleryHeaderText.textContent = 'Gallery';
-  galleryHeader.appendChild(galleryHeaderText);
 
-  // Images for the 'Gallery' section
+  // Image elements for the 'Gallery' section
+  const galleryInfo = document.createElement('div');
+  galleryInfo.classList.add('gallery-info');
+
   let gallery1 = document.createElement('div');
   let gallery2 = document.createElement('div');
   let gallery3 = document.createElement('div');
@@ -110,18 +114,22 @@ export function homepage() {
   })
 
   // Attaching all gallery elements to the 'Gallery' section
+  galleryHeader.appendChild(galleryHeaderText);
+
   galleryInfo.appendChild(gallery1);
   galleryInfo.appendChild(gallery2);
   galleryInfo.appendChild(gallery3);
   galleryInfo.appendChild(gallery4);
+
+  gallery.appendChild(galleryHeader);
+  gallery.appendChild(galleryInfo);
 
   // Attaching all main sections (Media, Our Philosophy, About Us, Testimonial, Gallery) to the existing home-content div.
   homeContent.appendChild(media);
   homeContent.appendChild(food);
   homeContent.appendChild(about);
   homeContent.appendChild(testimonial);
-  homeContent.appendChild(galleryHeader);
-  homeContent.appendChild(galleryInfo);
+  homeContent.appendChild(gallery);
 
   // Returns the home content container with all home page elements (now leaves a bar behind between each section - fix with CSS?)
   return homeContent;
