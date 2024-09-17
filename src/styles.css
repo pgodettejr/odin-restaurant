@@ -160,7 +160,8 @@ nav {
 }
 
 .gallery {
-  color: #1F2937;
+  background: #009746;
+  /* width: 100% */
 }
 
 .gallery-header {
@@ -171,20 +172,160 @@ nav {
   text-align: center;
 }
 
+/* Comment out height and position to revert changes */
 .gallery-info {
   display: flex;
   justify-content: center;
   text-align: center;
+  /* height: 400px; */
   margin-top: 32px;
   margin-bottom: 120px;
   gap: 64px;
+  /* position: relative; */
 }
 
+/* Comment out opacity, position, transition, z-index and background-size to revert changes */
 .gallery-info > div[class^="gallery-"] > img {
   width: 200px;
   height: 200px;
+  /* opacity: 0; */
+  /* position: absolute; */
+  /* transition: all 0.3s ease-in-out; */
+  /* z-index: 0; */
   border-radius: 10px;
+  /* background-size: contain; */
 }
+
+/* Comment out EVERYTHING from here to footer to revert the changes */
+
+/* .gallery-1 {
+  left: 15%;
+  opacity: .4;
+  transform: translateX(-50%);
+}
+
+.gallery-2, .gallery-4 {
+  width: 250px;
+  height: 250px;
+  opacity: 0.8;
+  z-index: 1;
+}
+
+.gallery-2 {
+  left: 30%;
+  transform: translateX(-50%);
+}
+
+.gallery-3 {
+  width: 300px;
+  height: 250px;
+  opacity: 1;
+  z-index: 2;
+  left: 50%;
+  box-shadow: -2px 5px 33px 6px rgba(0, 0, 0, .35);
+  transform: translateX(-50%);
+}
+
+.gallery-4 {
+  left: 70%;
+  transform: translateX(-50%);
+}
+
+.gallery-5 {
+  left: 85%;
+  opacity: .4;
+  transform: translateX(-50%);
+}
+
+.gallery-controls {
+  display: flex;
+  justify-content: center;
+  margin: 25px 0;
+  height: 100px;
+} */
+
+/* Doesn't matter if these next two are '.gallery-controls-button' or 'gallery-controls button'. Nothing shows on the homepage */
+
+/* .gallery-controls-button {
+  border: 0;
+  cursor: pointer;
+  font-size: 30px;
+  margin: 0 50px;
+  padding: 0 12px;
+  background-color: transparent;
+  text-transform: capitalize;
+}
+
+.gallery-controls-button:focus {
+  outline: none;
+}
+
+.gallery-controls-previous {
+  position: relative;
+}
+
+.gallery-controls-previous::before {
+  content: '';
+  display: inline-block;
+  height: 5px;
+  width: 5px;
+  left: -30px;
+  top: 25%;
+  padding: 10px;
+  border: solid #000;
+  border-width: 0 5px 5px 0;
+  position: absolute;
+  transform: rotate(135deg) translateY(-50%);
+  transition: left 0.15s ease-in-out;
+}
+
+.gallery-controls-previous:hover::before {
+  left: -40px;
+}
+
+.gallery-controls-next {
+  position: relative;
+}
+
+.gallery-controls-next::before {
+  content: '';
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  right: -30px;
+  top: 45;
+  padding: 10px;
+  border: solid #000;
+  border-width: 0 5px 5px 0;
+  transform: rotate(-45deg) translateY(-50%);
+  transition: right 0.15s ease-in-out;
+}
+
+.gallery-controls-next:hover::before {
+  right: -40px;
+}
+
+.gallery-nav {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  bottom: -15px;
+  width: 100%;
+  padding: 0;
+  position: absolute;
+}
+
+.gallery-nav li {
+  height: 10px;
+  width: 10px;
+  margin: 0 16px;
+  border-radius: 50%;
+  background: #CCC;
+}
+
+.gallery-nav li.gallery-item-selected {
+  background: #555;
+} */
 
 footer {
   display: flex;

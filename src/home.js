@@ -61,8 +61,6 @@ export function homepage() {
   quote.appendChild(author);
   testimonial.appendChild(quote);
 
-  // BRANCH: Add a container for the entire Gallery section to place all Gallery elements under, then set the background color for that container in the CSS
-
   // Header elements for 'Gallery' section
   const galleryHeader = document.createElement('div');
   galleryHeader.classList.add('gallery-header');
@@ -71,6 +69,7 @@ export function homepage() {
   galleryHeaderText.textContent = 'Gallery';
 
   // Image elements for the 'Gallery' section
+  // May need another wrapper to place the image section (galleryInfo) under to get the image carousel to work correctly
   const galleryInfo = document.createElement('div');
   galleryInfo.classList.add('gallery-info');
 
@@ -78,12 +77,14 @@ export function homepage() {
   let gallery2 = document.createElement('div');
   let gallery3 = document.createElement('div');
   let gallery4 = document.createElement('div');
+  let gallery5 = document.createElement('div');
 
   // BRANCH: Possibly change this section to a forEach method for the gallery divs (add a class to each one and/or add unique images to each)?
   gallery1.classList.add('gallery-1');
   gallery2.classList.add('gallery-2');
   gallery3.classList.add('gallery-3');
   gallery4.classList.add('gallery-4');
+  gallery5.classList.add('gallery-5');
 
   let galleryPic1 = document.createElement('img');
   galleryPic1.src = 'https://cdn.pixabay.com/photo/2021/07/29/13/28/meat-6507228_1280.jpg';
@@ -105,13 +106,22 @@ export function homepage() {
   galleryPic4.setAttribute('alt', 'table');
   gallery4.appendChild(galleryPic4);
 
+  let galleryPic5 = document.createElement('img');
+  galleryPic5.src = 'https://cdn.pixabay.com/photo/2021/07/29/13/28/meat-6507228_1280.jpg';
+  galleryPic5.setAttribute('alt', 'temp-meat-plate');
+  gallery5.appendChild(galleryPic5);
+
   // Subtext divs for the 'Gallery' section
-  // BRANCH: Inspect DevTools and make sure this current loop is set up correctly in the HTML/DOM. Should create empty divs with a class of 'subtext' (with no text currently).
-  document.querySelectorAll('div[class^="gallery-"]').forEach((element) => {
+  // TODO: Currently doesn't create empty divs with a class of 'subtext' (with no text currently). Change 'galleryInfo' back to 'document' then replace parenthesis with '.gallery-info > *'?
+  galleryInfo.querySelectorAll('div').forEach((el) => {
     let subtext = document.createElement('div');
     subtext.classList.add('subtext');
-    element.appendChild(subtext);
+    el.appendChild(subtext);
   })
+
+  // TODO: Controls for the image carousel in the 'Gallery' section
+  // const galleryControls = document.createElement('div');
+  // galleryControls.classList.add('gallery-controls');
 
   // Attaching all gallery elements to the 'Gallery' section
   galleryHeader.appendChild(galleryHeaderText);
@@ -120,9 +130,11 @@ export function homepage() {
   galleryInfo.appendChild(gallery2);
   galleryInfo.appendChild(gallery3);
   galleryInfo.appendChild(gallery4);
+  galleryInfo.appendChild(gallery5);
 
   gallery.appendChild(galleryHeader);
   gallery.appendChild(galleryInfo);
+  // gallery.appendChild(galleryControls);
 
   // Attaching all main sections (Media, Our Philosophy, About Us, Testimonial, Gallery) to the existing home-content div.
   homeContent.appendChild(media);
@@ -134,3 +146,67 @@ export function homepage() {
   // Returns the home content container with all home page elements (now leaves a bar behind between each section - fix with CSS?)
   return homeContent;
 }
+
+  // Attempt at some JS functionality for a 3D image carousel
+
+  // const galleryContainer = document.querySelector('.gallery-container');
+  // const galleryControlsContainer = document.querySelector('.gallery-controls');
+  // const galleryControlsArray = ['previous', 'next'];
+  // const galleryItems = document.querySelectorAll('img[alt]');
+
+  // class Carousel {
+  //   constructor(container, items, controls) {
+  //     this.carouselContainer = container;
+  //     this.carouselControls = controls;
+  //     this.carouselArray = [...items];
+  //   }
+
+  //   updateGallery() {
+  //     this.carouselArray.forEach(el => {
+  //       el.classList.remove('gallery-1');
+  //       el.classList.remove('gallery-2');
+  //       el.classList.remove('gallery-3');
+  //       el.classList.remove('gallery-4');
+  //       el.classList.remove('gallery-5');
+  //     });
+
+  //     this.carouselArray.slice(0, 5).forEach((el, i) => {
+  //       el.classList.add(`gallery-${i+1}`);
+  //     });
+  //   }
+
+  //   setCurrentState(direction) {
+  //     if (direction.className === 'gallery-controls-previous') {
+  //       this.carouselArray.unshift(this.carouselArray.pop());
+  //     } else {
+  //       this.carouselArray.push(this.carouselArray.shift());
+  //     }
+
+  //     this.updateGallery();
+  //   }
+
+  //   setControls() {
+  //     this.carouselControls.forEach(control => {
+
+  //       // Uncaught TypeError: Cannot read properties of null (reading 'appendChild')
+  //       galleryControlsContainer.appendChild(document.createElement('button')).className = `gallery-controls-${control}`;
+
+  //       document.querySelector(`.gallery-controls-${control}`).innerText = control;
+  //     });
+  //   }
+
+  //   useControls() {
+  //     const triggers = [...galleryControlsContainer.childNodes];
+  //     triggers.forEach(control => {
+  //       control.addEventListener('click', (e) => {
+  //         e.preventDefault();
+  //         this.setCurrentState(control);
+  //       });
+  //     });
+  //   }
+  // }
+
+  // const exampleCarousel = new Carousel(galleryContainer, galleryItems, galleryControlsArray);
+
+  // exampleCarousel.setControls();
+  // exampleCarousel.useControls();
