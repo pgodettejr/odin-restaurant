@@ -1,7 +1,11 @@
-* {
+width* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+:root {
+  --transition: cubic-bezier(0.1, 0.7, 0, 1);
 }
 
 html { color-scheme: dark }
@@ -172,160 +176,114 @@ nav {
   text-align: center;
 }
 
-/* Comment out height and position to revert changes */
 .gallery-info {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   text-align: center;
-  /* height: 400px; */
   margin-top: 32px;
   margin-bottom: 120px;
   gap: 64px;
+
+  /* width: 100vw; */
+  /* height: 100vh; */
   /* position: relative; */
+  /* z-index: 3; */
 }
 
-/* Comment out opacity, position, transition, z-index and background-size to revert changes */
-.gallery-info > div[class^="gallery-"] > img {
+.gallery-carousel {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+}
+
+.gallery-frame {
+  display: flex;
+}
+
+.gallery-slide {
+  display: grid;
+  max-width: 250px;
+  height: auto;
+  text-align: center;
+  margin: 32px 0 32px;
+  gap: 64px;
+  overflow: hidden;
+}
+
+.gallery-slide > div {
+  grid-column: 1;
+  grid-row: 1;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.gallery-slide > div[data-active="selected"] {
+  opacity: 1;
+}
+
+.gallery-slide > div[class^="gallery-"] > img {
   width: 200px;
   height: 200px;
-  /* opacity: 0; */
-  /* position: absolute; */
-  /* transition: all 0.3s ease-in-out; */
-  /* z-index: 0; */
   border-radius: 10px;
-  /* background-size: contain; */
 }
 
-/* Comment out EVERYTHING from here to footer to revert the changes */
-
-/* .gallery-1 {
-  left: 15%;
-  opacity: .4;
-  transform: translateX(-50%);
-}
-
-.gallery-2, .gallery-4 {
-  width: 250px;
-  height: 250px;
-  opacity: 0.8;
-  z-index: 1;
-}
-
-.gallery-2 {
-  left: 30%;
-  transform: translateX(-50%);
-}
-
-.gallery-3 {
-  width: 300px;
-  height: 250px;
-  opacity: 1;
-  z-index: 2;
-  left: 50%;
-  box-shadow: -2px 5px 33px 6px rgba(0, 0, 0, .35);
-  transform: translateX(-50%);
-}
-
-.gallery-4 {
-  left: 70%;
-  transform: translateX(-50%);
-}
-
-.gallery-5 {
-  left: 85%;
-  opacity: .4;
-  transform: translateX(-50%);
-}
-
-.gallery-controls {
-  display: flex;
-  justify-content: center;
-  margin: 25px 0;
-  height: 100px;
-} */
-
-/* Doesn't matter if these next two are '.gallery-controls-button' or 'gallery-controls button'. Nothing shows on the homepage */
-
-/* .gallery-controls-button {
-  border: 0;
+.carousel-button {
+  font-size: 4rem;
   cursor: pointer;
-  font-size: 30px;
-  margin: 0 50px;
-  padding: 0 12px;
-  background-color: transparent;
-  text-transform: capitalize;
+  border-radius: .25rem;
+  padding: 0 .5rem;
+  background-color: rgb(4, 155, 155);
+  border: 1px solid rgb(4, 155, 155);
+  height: 80px;
+  transition: 0.3s;
 }
 
-.gallery-controls-button:focus {
-  outline: none;
+.carousel-button:hover,
+.carousel-button:focus {
+  background-color: rgb(4, 195, 195);
+  border: 1px solid rgb(4, 195, 195);
 }
 
-.gallery-controls-previous {
-  position: relative;
+.carousel-button:focus {
+  outline: 1px solid black;
 }
 
-.gallery-controls-previous::before {
-  content: '';
-  display: inline-block;
-  height: 5px;
-  width: 5px;
-  left: -30px;
-  top: 25%;
-  padding: 10px;
-  border: solid #000;
-  border-width: 0 5px 5px 0;
-  position: absolute;
-  transform: rotate(135deg) translateY(-50%);
-  transition: left 0.15s ease-in-out;
+button[data-carousel-button="prev"] {
+  left: 0.5rem;
 }
 
-.gallery-controls-previous:hover::before {
-  left: -40px;
+button[data-carousel-button="next"] {
+  right: 0.5rem;
 }
 
-.gallery-controls-next {
-  position: relative;
+/* BRANCH: This is still adopting the styling of div[class*="content"] & button below. None of the button styling on here is activating, so it is a hierarchy issue. Figure out how to get this styling to take precedence over the button styling below */
+.carousel-dot {
+  width: 30px;
+  height: 30px;
+  border: 3px solid #333;
+  border-radius: 50%;
+  
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin: 0 4px;
+  background-color: rgb(4, 155, 155);
+  transition: background-color 0.3s ease;
 }
 
-.gallery-controls-next::before {
-  content: '';
-  display: inline-block;
-  width: 5px;
-  height: 5px;
-  right: -30px;
-  top: 45;
-  padding: 10px;
-  border: solid #000;
-  border-width: 0 5px 5px 0;
-  transform: rotate(-45deg) translateY(-50%);
-  transition: right 0.15s ease-in-out;
-}
-
-.gallery-controls-next:hover::before {
-  right: -40px;
+.carousel-dot.active {
+  background-color: rgb(4, 195, 195);
 }
 
 .gallery-nav {
-  display: flex;
-  justify-content: center;
-  list-style: none;
-  bottom: -15px;
-  width: 100%;
-  padding: 0;
-  position: absolute;
+  text-align: center;
+  margin-top: 10px;
 }
-
-.gallery-nav li {
-  height: 10px;
-  width: 10px;
-  margin: 0 16px;
-  border-radius: 50%;
-  background: #CCC;
-}
-
-.gallery-nav li.gallery-item-selected {
-  background: #555;
-} */
 
 footer {
   display: flex;

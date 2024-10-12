@@ -17,7 +17,6 @@ navButtons.forEach(button => {
         button.setAttribute('aria-current', 'page');
         content.replaceChildren();
         content.appendChild(menupage());
-        // slide();
         break;
 
       case 'Home':
@@ -25,7 +24,6 @@ navButtons.forEach(button => {
         button.setAttribute('aria-current', 'page');
         content.replaceChildren();
         content.appendChild(homepage());
-        // slide();
         break;
 
       case 'Contact':
@@ -33,7 +31,6 @@ navButtons.forEach(button => {
         button.setAttribute('aria-current', 'page');
         content.replaceChildren();
         content.appendChild(contactPage());
-        // slide();
         break;
     }
   })
@@ -41,7 +38,50 @@ navButtons.forEach(button => {
 
 content.appendChild(homepage());
 
+const carouselButtons = document.querySelectorAll('.carousel-button');
+const slides = document.querySelectorAll('.gallery-slide > div');
+const dots = document.querySelectorAll('.carousel-dot');
+
+let currentIndex = 0;
+const totalSlides = slides.length;
+
+// Sets the active slide and corresponding dot
+function setActiveSlide(index) {
+  slides.forEach((slide, i) => {
+    slide.removeAttribute('data-active');
+    dots[i].classList.remove('active');
+    if (i === index) {
+      slide.setAttribute('data-active', 'selected');
+      dots[i].classList.add('active');
+    }
+  });
+}
+
+// Arrow button event listeners
+carouselButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const offset = button.dataset.carouselButton === "next" ? 1 : -1;
+    currentIndex = (currentIndex + offset + totalSlides) % totalSlides;
+    setActiveSlide(currentIndex);
+  });
+});
+
+// Navigation dots click event
+dots.forEach((dot, index) => {
+  dot.addEventListener('click', () => {
+    currentIndex = index;
+    setActiveSlide(currentIndex);
+  });
+});
+
+// Automatically advances slides every 5 seconds
+setInterval(() => {
+  currentIndex = (currentIndex + 1) % totalSlides;
+  setActiveSlide(currentIndex);
+}, 5000);
+
 // BRANCH: Attempted function for a sliding animation on button click
+
 // function slide() {
 //   const menu = document.querySelector('.menu-page');
 //   const contact = document.querySelector('.contact-page');

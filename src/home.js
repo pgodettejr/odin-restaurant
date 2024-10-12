@@ -20,7 +20,7 @@ export function homepage() {
   // Image for the 'media' section of the homepage
   let mediaImage = document.createElement('img');
   mediaImage.src = 'https://cdn.pixabay.com/photo/2014/11/09/14/42/greek-523731_1280.jpg';
-  mediaImage.setAttribute = ('alt', 'restaurant-pic-1');
+  mediaImage.setAttribute('alt', 'restaurant-pic-1');
   media.appendChild(mediaImage);
 
   const foodHeader = document.createElement('h2');
@@ -67,74 +67,100 @@ export function homepage() {
 
   const galleryHeaderText = document.createElement('h2');
   galleryHeaderText.textContent = 'Gallery';
-
-  // Image elements for the 'Gallery' section
-  // May need another wrapper to place the image section (galleryInfo) under to get the image carousel to work correctly
+  
+  // Wrapper for the 'Gallery' section
   const galleryInfo = document.createElement('div');
   galleryInfo.classList.add('gallery-info');
 
+  // Wrapper for the image carousel and nav buttons
+  const galleryCarousel = document.createElement('div');
+  galleryCarousel.classList.add('gallery-carousel');
+
+  // TODO: Controls for the image carousel in the 'Gallery' section
+  const galleryButtonPrev = document.createElement('button');
+  galleryButtonPrev.classList.add('carousel-button');
+  galleryButtonPrev.setAttribute('data-carousel-button', 'prev');
+  galleryButtonPrev.innerHTML = "&#8656;";
+
+  const galleryButtonNext = document.createElement('button');
+  galleryButtonNext.classList.add('carousel-button');
+  galleryButtonNext.setAttribute('data-carousel-button', 'next');
+  galleryButtonNext.innerHTML = "&#8658;";
+
+  // Wrapper containing the "gallery slide" itself, acting as a "gallery frame"
+  const galleryFrame = document.createElement('div');
+  galleryFrame.classList.add('gallery-frame');
+
+  // Wrapper specifically to contain the images themselves that acts as the "gallery slide"
+  const gallerySlide = document.createElement('div');
+  gallerySlide.classList.add('gallery-slide');
+  
+  // Image elements for the 'Gallery' section
+  let gallery0 = document.createElement('div');
   let gallery1 = document.createElement('div');
   let gallery2 = document.createElement('div');
   let gallery3 = document.createElement('div');
-  let gallery4 = document.createElement('div');
-  let gallery5 = document.createElement('div');
 
   // BRANCH: Possibly change this section to a forEach method for the gallery divs (add a class to each one and/or add unique images to each)?
+  gallery0.classList.add('gallery-0');
+  gallery0.setAttribute('data-active', 'selected');
+
   gallery1.classList.add('gallery-1');
   gallery2.classList.add('gallery-2');
   gallery3.classList.add('gallery-3');
-  gallery4.classList.add('gallery-4');
-  gallery5.classList.add('gallery-5');
+
+  let galleryPic0 = document.createElement('img');
+  galleryPic0.src = 'https://cdn.pixabay.com/photo/2021/07/29/13/28/meat-6507228_1280.jpg';
+  galleryPic0.setAttribute('alt', 'meat-plate');
+  gallery0.appendChild(galleryPic0);
 
   let galleryPic1 = document.createElement('img');
-  galleryPic1.src = 'https://cdn.pixabay.com/photo/2021/07/29/13/28/meat-6507228_1280.jpg';
-  galleryPic1.setAttribute('alt', 'meat-plate');
+  galleryPic1.src = 'https://cdn.pixabay.com/photo/2015/03/15/13/40/gyros-674425_1280.jpg';
+  galleryPic1.setAttribute('alt', 'gyro');
   gallery1.appendChild(galleryPic1);
 
   let galleryPic2 = document.createElement('img');
-  galleryPic2.src = 'https://cdn.pixabay.com/photo/2015/03/15/13/40/gyros-674425_1280.jpg';
-  galleryPic2.setAttribute('alt', 'gyro');
+  galleryPic2.src = 'https://cdn.pixabay.com/photo/2018/04/21/03/47/food-3337621_1280.jpg';
+  galleryPic2.setAttribute('alt', 'salad');
   gallery2.appendChild(galleryPic2);
 
   let galleryPic3 = document.createElement('img');
-  galleryPic3.src = 'https://cdn.pixabay.com/photo/2018/04/21/03/47/food-3337621_1280.jpg';
-  galleryPic3.setAttribute('alt', 'salad');
+  galleryPic3.src = 'https://cdn.pixabay.com/photo/2017/11/08/19/01/table-2931360_1280.jpg';
+  galleryPic3.setAttribute('alt', 'table');
   gallery3.appendChild(galleryPic3);
 
-  let galleryPic4 = document.createElement('img');
-  galleryPic4.src = 'https://cdn.pixabay.com/photo/2017/11/08/19/01/table-2931360_1280.jpg';
-  galleryPic4.setAttribute('alt', 'table');
-  gallery4.appendChild(galleryPic4);
+  // Navigation dots wrapper
+  const galleryNav = document.createElement('div');
+  galleryNav.classList.add('gallery-nav');
 
-  let galleryPic5 = document.createElement('img');
-  galleryPic5.src = 'https://cdn.pixabay.com/photo/2021/07/29/13/28/meat-6507228_1280.jpg';
-  galleryPic5.setAttribute('alt', 'temp-meat-plate');
-  gallery5.appendChild(galleryPic5);
-
-  // Subtext divs for the 'Gallery' section
-  // TODO: Currently doesn't create empty divs with a class of 'subtext' (with no text currently). Change 'galleryInfo' back to 'document' then replace parenthesis with '.gallery-info > *'?
-  galleryInfo.querySelectorAll('div').forEach((el) => {
-    let subtext = document.createElement('div');
-    subtext.classList.add('subtext');
-    el.appendChild(subtext);
-  })
-
-  // TODO: Controls for the image carousel in the 'Gallery' section
-  // const galleryControls = document.createElement('div');
-  // galleryControls.classList.add('gallery-controls');
+  // Creates dots based on number of images
+  for (let i = 0; i < 4; i++) {
+    const dot = document.createElement('button');
+    dot.classList.add('carousel-dot');
+    if (i === 0) dot.classList.add('active'); // Sets first dot as active by default
+    dot.setAttribute('data-slide', i); // Sets data attribute for slide index
+    galleryNav.appendChild(dot);
+  }
 
   // Attaching all gallery elements to the 'Gallery' section
   galleryHeader.appendChild(galleryHeaderText);
 
-  galleryInfo.appendChild(gallery1);
-  galleryInfo.appendChild(gallery2);
-  galleryInfo.appendChild(gallery3);
-  galleryInfo.appendChild(gallery4);
-  galleryInfo.appendChild(gallery5);
+  gallerySlide.appendChild(gallery0);
+  gallerySlide.appendChild(gallery1);
+  gallerySlide.appendChild(gallery2);
+  gallerySlide.appendChild(gallery3);
+
+  galleryFrame.appendChild(gallerySlide);
+
+  galleryCarousel.appendChild(galleryButtonPrev);
+  galleryCarousel.appendChild(galleryFrame);
+  galleryCarousel.appendChild(galleryButtonNext);
+
+  galleryInfo.appendChild(galleryCarousel);
+  galleryInfo.appendChild(galleryNav);
 
   gallery.appendChild(galleryHeader);
   gallery.appendChild(galleryInfo);
-  // gallery.appendChild(galleryControls);
 
   // Attaching all main sections (Media, Our Philosophy, About Us, Testimonial, Gallery) to the existing home-content div.
   homeContent.appendChild(media);
@@ -146,67 +172,3 @@ export function homepage() {
   // Returns the home content container with all home page elements (now leaves a bar behind between each section - fix with CSS?)
   return homeContent;
 }
-
-  // Attempt at some JS functionality for a 3D image carousel
-
-  // const galleryContainer = document.querySelector('.gallery-container');
-  // const galleryControlsContainer = document.querySelector('.gallery-controls');
-  // const galleryControlsArray = ['previous', 'next'];
-  // const galleryItems = document.querySelectorAll('img[alt]');
-
-  // class Carousel {
-  //   constructor(container, items, controls) {
-  //     this.carouselContainer = container;
-  //     this.carouselControls = controls;
-  //     this.carouselArray = [...items];
-  //   }
-
-  //   updateGallery() {
-  //     this.carouselArray.forEach(el => {
-  //       el.classList.remove('gallery-1');
-  //       el.classList.remove('gallery-2');
-  //       el.classList.remove('gallery-3');
-  //       el.classList.remove('gallery-4');
-  //       el.classList.remove('gallery-5');
-  //     });
-
-  //     this.carouselArray.slice(0, 5).forEach((el, i) => {
-  //       el.classList.add(`gallery-${i+1}`);
-  //     });
-  //   }
-
-  //   setCurrentState(direction) {
-  //     if (direction.className === 'gallery-controls-previous') {
-  //       this.carouselArray.unshift(this.carouselArray.pop());
-  //     } else {
-  //       this.carouselArray.push(this.carouselArray.shift());
-  //     }
-
-  //     this.updateGallery();
-  //   }
-
-  //   setControls() {
-  //     this.carouselControls.forEach(control => {
-
-  //       // Uncaught TypeError: Cannot read properties of null (reading 'appendChild')
-  //       galleryControlsContainer.appendChild(document.createElement('button')).className = `gallery-controls-${control}`;
-
-  //       document.querySelector(`.gallery-controls-${control}`).innerText = control;
-  //     });
-  //   }
-
-  //   useControls() {
-  //     const triggers = [...galleryControlsContainer.childNodes];
-  //     triggers.forEach(control => {
-  //       control.addEventListener('click', (e) => {
-  //         e.preventDefault();
-  //         this.setCurrentState(control);
-  //       });
-  //     });
-  //   }
-  // }
-
-  // const exampleCarousel = new Carousel(galleryContainer, galleryItems, galleryControlsArray);
-
-  // exampleCarousel.setControls();
-  // exampleCarousel.useControls();
